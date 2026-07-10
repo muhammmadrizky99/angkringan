@@ -10,17 +10,20 @@ router.get('/sales', authenticate, async (req: AuthRequest, res: any, next: any)
     try {
         const { startDate, endDate } = req.query;
 
-        if (!startDate || !endDate) {
-            return res.status(400).json({
-                success: false,
-                message: 'startDate dan endDate wajib diisi',
-            });
-        }
+        let start: Date;
+        let end: Date;
 
-        const start = new Date(startDate as string);
-        start.setHours(0, 0, 0, 0);
-        const end = new Date(endDate as string);
-        end.setHours(23, 59, 59, 999);
+        if (!startDate || !endDate) {
+            // Default to current month
+            const now = new Date();
+            start = new Date(now.getFullYear(), now.getMonth(), 1);
+            end = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59, 999);
+        } else {
+            start = new Date(startDate as string);
+            start.setHours(0, 0, 0, 0);
+            end = new Date(endDate as string);
+            end.setHours(23, 59, 59, 999);
+        }
 
         const transactions = await prisma.transaction.findMany({
             where: { date: { gte: start, lte: end } },
@@ -55,7 +58,10 @@ router.get('/sales', authenticate, async (req: AuthRequest, res: any, next: any)
         res.json({
             success: true,
             data: {
-                period: { startDate: startDate as string, endDate: endDate as string },
+                period: {
+                    startDate: startDate ? startDate as string : start.toISOString().split('T')[0],
+                    endDate: endDate ? endDate as string : end.toISOString().split('T')[0]
+                },
                 totalTransactions: transactions.length,
                 totalRevenue: Math.round(totalRevenue),
                 productSales: Object.values(productSales),
@@ -76,17 +82,19 @@ router.get(
         try {
             const { startDate, endDate } = req.query;
 
-            if (!startDate || !endDate) {
-                return res.status(400).json({
-                    success: false,
-                    message: 'startDate dan endDate wajib diisi',
-                });
-            }
+            let start: Date;
+            let end: Date;
 
-            const start = new Date(startDate as string);
-            start.setHours(0, 0, 0, 0);
-            const end = new Date(endDate as string);
-            end.setHours(23, 59, 59, 999);
+            if (!startDate || !endDate) {
+                const now = new Date();
+                start = new Date(now.getFullYear(), now.getMonth(), 1);
+                end = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59, 999);
+            } else {
+                start = new Date(startDate as string);
+                start.setHours(0, 0, 0, 0);
+                end = new Date(endDate as string);
+                end.setHours(23, 59, 59, 999);
+            }
 
             const transactions = await prisma.transaction.findMany({
                 where: { date: { gte: start, lte: end } },
@@ -126,7 +134,7 @@ router.get(
             );
             res.setHeader(
                 'Content-Disposition',
-                `attachment; filename=laporan_${startDate}_${endDate}.xlsx`
+                `attachment; filename=laporan_${startDate || 'default'}_${endDate || 'default'}.xlsx`
             );
             res.send(buffer);
         } catch (error) {

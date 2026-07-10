@@ -7,7 +7,7 @@ import PageHeader from '@/components/PageHeader';
 import EmptyState from '@/components/EmptyState';
 import {
     FiShoppingCart, FiPlus, FiMinus, FiTrash2, FiCheck,
-    FiSearch, FiX, FiCheckCircle
+    FiSearch, FiX, FiCheckCircle, FiBox
 } from 'react-icons/fi';
 
 interface Product {
@@ -23,22 +23,7 @@ interface CartItem {
     quantity: number;
 }
 
-// Category emoji map for visual identity
-const categoryEmoji: Record<string, string> = {
-    'Sate': '🍢',
-    'Nasi': '🍚',
-    'Gorengan': '🍤',
-    'Minuman': '🥤',
-    'Snack': '🍿',
-    'Lauk': '🍗',
-};
 
-const getCategoryEmoji = (cat: string) => {
-    for (const [key, emoji] of Object.entries(categoryEmoji)) {
-        if (cat.toLowerCase().includes(key.toLowerCase())) return emoji;
-    }
-    return '🍽️';
-};
 
 export default function POSPage() {
     const [products, setProducts] = useState<Product[]>([]);
@@ -195,7 +180,7 @@ export default function POSPage() {
                                 className={`flex-shrink-0 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 flex items-center gap-1.5
                                     ${activeCategory === cat ? 'bg-dark-900 text-white shadow-sm' : 'bg-white text-dark-500 border border-slate-200 hover:bg-slate-50'}`}
                             >
-                                {getCategoryEmoji(cat)} {cat}
+                                {cat}
                             </button>
                         ))}
                     </div>
@@ -232,7 +217,9 @@ export default function POSPage() {
                                                 {inCart.quantity}
                                             </div>
                                         )}
-                                        <div className="text-2xl mb-2">{getCategoryEmoji(product.category)}</div>
+                                        <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center mb-3">
+                                            <FiBox className="text-slate-400" size={20} />
+                                        </div>
                                         <p className="font-semibold text-dark-900 text-sm group-hover:text-primary-600 transition-colors leading-tight">{product.name}</p>
                                         <p className="text-primary-500 font-bold mt-1.5 text-sm">{formatCurrency(product.price)}</p>
                                         <p className={`text-xs mt-1 ${product.currentStock < 10 ? 'text-red-400' : 'text-dark-400'}`}>
@@ -273,7 +260,9 @@ export default function POSPage() {
                         <div className="space-y-2.5">
                             {cart.map((item) => (
                                 <div key={item.product.id} className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl animate-fade-in">
-                                    <div className="text-lg">{getCategoryEmoji(item.product.category)}</div>
+                                    <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center flex-shrink-0">
+                                        <FiBox size={14} className="text-dark-400" />
+                                    </div>
                                     <div className="flex-1 min-w-0">
                                         <p className="font-medium text-dark-900 text-sm truncate">{item.product.name}</p>
                                         <p className="text-xs text-primary-500 font-semibold">{formatCurrency(item.product.price)}</p>

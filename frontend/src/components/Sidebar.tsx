@@ -83,14 +83,15 @@ export default function Sidebar() {
 
             {/* Sidebar */}
             <aside
-                className={`fixed top-0 left-0 h-full ${sidebarWidth} bg-dark-900 text-white z-40 transition-all duration-300 flex flex-col
+                className={`fixed top-0 left-0 h-full ${sidebarWidth} text-white z-40 transition-all duration-300 flex flex-col border-r border-white/5
                     ${isMobileOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}
+                style={{ background: 'var(--gradient-hero)' }}
             >
                 {/* Logo */}
                 <div className="p-5 border-b border-dark-700/50 flex-shrink-0">
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center shadow-lg shadow-primary-500/20 flex-shrink-0">
-                            <span className="text-white font-bold text-lg">A</span>
+                        <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+                            <img src="/images/logo.png" alt="Logo" className="w-full h-full object-cover" />
                         </div>
                         {!isCollapsed && (
                             <div className="animate-fade-in overflow-hidden">
@@ -105,9 +106,7 @@ export default function Sidebar() {
                 {!isCollapsed ? (
                     <div className="p-3 mx-3 mt-4 rounded-xl bg-dark-800/60 border border-dark-700/40 flex-shrink-0">
                         <div className="flex items-center gap-3">
-                            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-xs font-bold flex-shrink-0">
-                                {getInitials(user?.name || '')}
-                            </div>
+
                             <div className="min-w-0 flex-1">
                                 <p className="font-semibold text-sm truncate">{user?.name}</p>
                                 <span className={`mt-0.5 inline-block text-[10px] font-bold px-2 py-0.5 rounded-md
@@ -119,8 +118,8 @@ export default function Sidebar() {
                     </div>
                 ) : (
                     <div className="mt-4 flex justify-center flex-shrink-0">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-xs font-bold">
-                            {getInitials(user?.name || '')}
+                        <div className="w-10 h-10 flex items-center justify-center">
+                            <FiUsers size={20} className="text-dark-300" />
                         </div>
                     </div>
                 )}

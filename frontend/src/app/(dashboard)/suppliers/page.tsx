@@ -82,15 +82,15 @@ export default function SuppliersPage() {
                 <div className="card p-0">
                     <div className="table-container">
                         <table>
-                            <thead><tr><th>Nama</th><th>Telepon</th><th>Alamat</th><th>Aksi</th></tr></thead>
+                            <thead><tr><th>Nama</th><th>Telepon</th><th>Alamat</th><th className="text-center">Aksi</th></tr></thead>
                             <tbody>
                                 {suppliers.map((s) => (
                                     <tr key={s.id}>
                                         <td className="font-medium">{s.name}</td>
                                         <td>{s.phone}</td>
                                         <td className="max-w-xs truncate">{s.address}</td>
-                                        <td>
-                                            <div className="flex gap-2">
+                                        <td className="text-center">
+                                            <div className="flex justify-center items-center gap-2">
                                                 <button onClick={() => openModal(s)} className="p-2 rounded-lg hover:bg-blue-50 text-blue-500 transition-colors"><FiEdit2 size={16} /></button>
                                                 <button onClick={() => setDeleteTarget(s)} className="p-2 rounded-lg hover:bg-red-50 text-red-500 transition-colors"><FiTrash2 size={16} /></button>
                                             </div>

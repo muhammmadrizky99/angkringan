@@ -1,2272 +1,2272 @@
 {
   "2025-02-01": {
-    "code": 51,
-    "precip": 1.1,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.1,
+    "mapped_status": 2
   },
   "2025-02-02": {
-    "code": 51,
-    "precip": 0.8,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.8,
+    "mapped_status": 2
   },
   "2025-02-03": {
-    "code": 65,
-    "precip": 14.2,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 14.2,
+    "mapped_status": 2
   },
   "2025-02-04": {
-    "code": 65,
-    "precip": 13.4,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 13.4,
+    "mapped_status": 2
   },
   "2025-02-05": {
-    "code": 63,
-    "precip": 11.4,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 11.4,
+    "mapped_status": 2
   },
   "2025-02-06": {
-    "code": 63,
-    "precip": 10.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 10.0,
+    "mapped_status": 2
   },
   "2025-02-07": {
-    "code": 63,
-    "precip": 21.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 21.6,
+    "mapped_status": 2
   },
   "2025-02-08": {
-    "code": 61,
-    "precip": 8.5,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 8.5,
+    "mapped_status": 2
   },
   "2025-02-09": {
-    "code": 61,
-    "precip": 6.7,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 6.7,
+    "mapped_status": 2
   },
   "2025-02-10": {
-    "code": 51,
-    "precip": 0.2,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.2,
+    "mapped_status": 2
   },
   "2025-02-11": {
-    "code": 51,
-    "precip": 0.7,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.7,
+    "mapped_status": 2
   },
   "2025-02-12": {
-    "code": 51,
-    "precip": 0.4,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.4,
+    "mapped_status": 2
   },
   "2025-02-13": {
-    "code": 61,
-    "precip": 2.2,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 2.2,
+    "mapped_status": 2
   },
   "2025-02-14": {
-    "code": 51,
-    "precip": 1.0,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.0,
+    "mapped_status": 2
   },
   "2025-02-15": {
-    "code": 63,
-    "precip": 10.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 10.0,
+    "mapped_status": 2
   },
   "2025-02-16": {
-    "code": 65,
-    "precip": 16.8,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 16.8,
+    "mapped_status": 2
   },
   "2025-02-17": {
-    "code": 63,
-    "precip": 21.2,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 21.2,
+    "mapped_status": 2
   },
   "2025-02-18": {
-    "code": 63,
-    "precip": 8.3,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 8.3,
+    "mapped_status": 2
   },
   "2025-02-19": {
-    "code": 65,
-    "precip": 25.6,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 25.6,
+    "mapped_status": 2
   },
   "2025-02-20": {
-    "code": 65,
-    "precip": 15.3,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 15.3,
+    "mapped_status": 2
   },
   "2025-02-21": {
-    "code": 53,
-    "precip": 3.2,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 3.2,
+    "mapped_status": 2
   },
   "2025-02-22": {
-    "code": 63,
-    "precip": 8.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 8.0,
+    "mapped_status": 2
   },
   "2025-02-23": {
-    "code": 53,
-    "precip": 3.8,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 3.8,
+    "mapped_status": 2
   },
   "2025-02-24": {
-    "code": 63,
-    "precip": 15.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 15.6,
+    "mapped_status": 2
   },
   "2025-02-25": {
-    "code": 55,
-    "precip": 8.5,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 8.5,
+    "mapped_status": 2
   },
   "2025-02-26": {
-    "code": 63,
-    "precip": 16.3,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 16.3,
+    "mapped_status": 2
   },
   "2025-02-27": {
-    "code": 63,
-    "precip": 16.2,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 16.2,
+    "mapped_status": 2
   },
   "2025-02-28": {
-    "code": 65,
-    "precip": 27.9,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 27.9,
+    "mapped_status": 2
   },
   "2025-03-01": {
-    "code": 53,
-    "precip": 3.3,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 3.3,
+    "mapped_status": 2
   },
   "2025-03-02": {
-    "code": 63,
-    "precip": 20.9,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 20.9,
+    "mapped_status": 2
   },
   "2025-03-03": {
-    "code": 65,
-    "precip": 24.2,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 24.2,
+    "mapped_status": 2
   },
   "2025-03-04": {
-    "code": 63,
-    "precip": 12.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 12.0,
+    "mapped_status": 2
   },
   "2025-03-05": {
-    "code": 65,
-    "precip": 32.3,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 32.3,
+    "mapped_status": 2
   },
   "2025-03-06": {
-    "code": 55,
-    "precip": 7.2,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 7.2,
+    "mapped_status": 2
   },
   "2025-03-07": {
-    "code": 53,
-    "precip": 1.2,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.2,
+    "mapped_status": 2
   },
   "2025-03-08": {
-    "code": 61,
-    "precip": 3.9,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 3.9,
+    "mapped_status": 2
   },
   "2025-03-09": {
-    "code": 51,
-    "precip": 0.2,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.2,
+    "mapped_status": 2
   },
   "2025-03-10": {
-    "code": 63,
-    "precip": 23.3,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 23.3,
+    "mapped_status": 2
   },
   "2025-03-11": {
-    "code": 63,
-    "precip": 7.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.5,
+    "mapped_status": 2
   },
   "2025-03-12": {
-    "code": 65,
-    "precip": 51.6,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 51.6,
+    "mapped_status": 2
   },
   "2025-03-13": {
-    "code": 61,
-    "precip": 5.4,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 5.4,
+    "mapped_status": 2
   },
   "2025-03-14": {
-    "code": 61,
-    "precip": 10.3,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 10.3,
+    "mapped_status": 2
   },
   "2025-03-15": {
-    "code": 63,
-    "precip": 6.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 6.7,
+    "mapped_status": 2
   },
   "2025-03-16": {
-    "code": 51,
-    "precip": 1.7,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.7,
+    "mapped_status": 2
   },
   "2025-03-17": {
-    "code": 63,
-    "precip": 19.9,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 19.9,
+    "mapped_status": 2
   },
   "2025-03-18": {
-    "code": 63,
-    "precip": 17.4,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 17.4,
+    "mapped_status": 2
   },
   "2025-03-19": {
-    "code": 61,
-    "precip": 13.2,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 13.2,
+    "mapped_status": 2
   },
   "2025-03-20": {
-    "code": 61,
-    "precip": 8.0,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 8.0,
+    "mapped_status": 2
   },
   "2025-03-21": {
-    "code": 53,
-    "precip": 1.5,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.5,
+    "mapped_status": 2
   },
   "2025-03-22": {
-    "code": 63,
-    "precip": 12.8,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 12.8,
+    "mapped_status": 2
   },
   "2025-03-23": {
-    "code": 63,
-    "precip": 17.8,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 17.8,
+    "mapped_status": 2
   },
   "2025-03-24": {
-    "code": 63,
-    "precip": 11.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 11.7,
+    "mapped_status": 2
   },
   "2025-03-25": {
-    "code": 51,
-    "precip": 1.4,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.4,
+    "mapped_status": 2
   },
   "2025-03-26": {
-    "code": 53,
-    "precip": 2.8,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.8,
+    "mapped_status": 2
   },
   "2025-03-27": {
-    "code": 61,
-    "precip": 10.7,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 10.7,
+    "mapped_status": 2
   },
   "2025-03-28": {
-    "code": 61,
-    "precip": 6.4,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 6.4,
+    "mapped_status": 2
   },
   "2025-03-29": {
-    "code": 55,
-    "precip": 3.0,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 3.0,
+    "mapped_status": 2
   },
   "2025-03-30": {
-    "code": 51,
-    "precip": 0.9,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.9,
+    "mapped_status": 2
   },
   "2025-03-31": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-04-01": {
-    "code": 51,
-    "precip": 1.5,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.5,
+    "mapped_status": 2
   },
   "2025-04-02": {
-    "code": 63,
-    "precip": 7.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.7,
+    "mapped_status": 2
   },
   "2025-04-03": {
-    "code": 51,
-    "precip": 1.5,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.5,
+    "mapped_status": 2
   },
   "2025-04-04": {
-    "code": 63,
-    "precip": 10.1,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 10.1,
+    "mapped_status": 2
   },
   "2025-04-05": {
-    "code": 65,
-    "precip": 12.5,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 12.5,
+    "mapped_status": 2
   },
   "2025-04-06": {
-    "code": 65,
-    "precip": 38.0,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 38.0,
+    "mapped_status": 2
   },
   "2025-04-07": {
-    "code": 65,
-    "precip": 18.2,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 18.2,
+    "mapped_status": 2
   },
   "2025-04-08": {
-    "code": 63,
-    "precip": 12.2,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 12.2,
+    "mapped_status": 2
   },
   "2025-04-09": {
-    "code": 63,
-    "precip": 11.9,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 11.9,
+    "mapped_status": 2
   },
   "2025-04-10": {
-    "code": 63,
-    "precip": 11.8,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 11.8,
+    "mapped_status": 2
   },
   "2025-04-11": {
-    "code": 63,
-    "precip": 11.8,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 11.8,
+    "mapped_status": 2
   },
   "2025-04-12": {
-    "code": 65,
-    "precip": 18.3,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 18.3,
+    "mapped_status": 2
   },
   "2025-04-13": {
-    "code": 63,
-    "precip": 15.3,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 15.3,
+    "mapped_status": 2
   },
   "2025-04-14": {
-    "code": 63,
-    "precip": 6.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 6.7,
+    "mapped_status": 2
   },
   "2025-04-15": {
-    "code": 55,
-    "precip": 6.0,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 6.0,
+    "mapped_status": 2
   },
   "2025-04-16": {
-    "code": 53,
-    "precip": 6.1,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 6.1,
+    "mapped_status": 2
   },
   "2025-04-17": {
-    "code": 53,
-    "precip": 1.8,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.8,
+    "mapped_status": 2
   },
   "2025-04-18": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-04-19": {
-    "code": 65,
-    "precip": 28.0,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 28.0,
+    "mapped_status": 2
   },
   "2025-04-20": {
-    "code": 63,
-    "precip": 5.9,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 5.9,
+    "mapped_status": 2
   },
   "2025-04-21": {
-    "code": 63,
-    "precip": 13.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 13.6,
+    "mapped_status": 2
   },
   "2025-04-22": {
-    "code": 63,
-    "precip": 6.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 6.0,
+    "mapped_status": 2
   },
   "2025-04-23": {
-    "code": 65,
-    "precip": 18.5,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 18.5,
+    "mapped_status": 2
   },
   "2025-04-24": {
-    "code": 53,
-    "precip": 2.0,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.0,
+    "mapped_status": 2
   },
   "2025-04-25": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-04-26": {
-    "code": 65,
-    "precip": 11.7,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 11.7,
+    "mapped_status": 2
   },
   "2025-04-27": {
-    "code": 61,
-    "precip": 6.2,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 6.2,
+    "mapped_status": 2
   },
   "2025-04-28": {
-    "code": 63,
-    "precip": 7.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.6,
+    "mapped_status": 2
   },
   "2025-04-29": {
-    "code": 63,
-    "precip": 8.1,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 8.1,
+    "mapped_status": 2
   },
   "2025-04-30": {
-    "code": 65,
-    "precip": 31.6,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 31.6,
+    "mapped_status": 2
   },
   "2025-05-01": {
-    "code": 63,
-    "precip": 10.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 10.0,
+    "mapped_status": 2
   },
   "2025-05-02": {
-    "code": 53,
-    "precip": 1.7,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.7,
+    "mapped_status": 2
   },
   "2025-05-03": {
-    "code": 51,
-    "precip": 1.3,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.3,
+    "mapped_status": 2
   },
   "2025-05-04": {
-    "code": 63,
-    "precip": 7.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.5,
+    "mapped_status": 2
   },
   "2025-05-05": {
-    "code": 55,
-    "precip": 1.6,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 1.6,
+    "mapped_status": 2
   },
   "2025-05-06": {
-    "code": 51,
-    "precip": 0.3,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.3,
+    "mapped_status": 2
   },
   "2025-05-07": {
-    "code": 63,
-    "precip": 5.2,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 5.2,
+    "mapped_status": 2
   },
   "2025-05-08": {
-    "code": 55,
-    "precip": 1.4,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 1.4,
+    "mapped_status": 2
   },
   "2025-05-09": {
-    "code": 65,
-    "precip": 15.0,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 15.0,
+    "mapped_status": 2
   },
   "2025-05-10": {
-    "code": 65,
-    "precip": 18.6,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 18.6,
+    "mapped_status": 2
   },
   "2025-05-11": {
-    "code": 61,
-    "precip": 4.3,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 4.3,
+    "mapped_status": 2
   },
   "2025-05-12": {
-    "code": 51,
-    "precip": 0.8,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.8,
+    "mapped_status": 2
   },
   "2025-05-13": {
-    "code": 61,
-    "precip": 4.3,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 4.3,
+    "mapped_status": 2
   },
   "2025-05-14": {
-    "code": 53,
-    "precip": 1.8,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.8,
+    "mapped_status": 2
   },
   "2025-05-15": {
-    "code": 53,
-    "precip": 2.1,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.1,
+    "mapped_status": 2
   },
   "2025-05-16": {
-    "code": 53,
-    "precip": 2.7,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.7,
+    "mapped_status": 2
   },
   "2025-05-17": {
-    "code": 55,
-    "precip": 1.5,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 1.5,
+    "mapped_status": 2
   },
   "2025-05-18": {
-    "code": 63,
-    "precip": 6.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 6.7,
+    "mapped_status": 2
   },
   "2025-05-19": {
-    "code": 53,
-    "precip": 2.6,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.6,
+    "mapped_status": 2
   },
   "2025-05-20": {
-    "code": 63,
-    "precip": 6.9,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 6.9,
+    "mapped_status": 2
   },
   "2025-05-21": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-05-22": {
-    "code": 53,
-    "precip": 4.5,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 4.5,
+    "mapped_status": 2
   },
   "2025-05-23": {
-    "code": 53,
-    "precip": 7.8,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 7.8,
+    "mapped_status": 2
   },
   "2025-05-24": {
-    "code": 53,
-    "precip": 1.6,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.6,
+    "mapped_status": 2
   },
   "2025-05-25": {
-    "code": 51,
-    "precip": 0.6,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.6,
+    "mapped_status": 2
   },
   "2025-05-26": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-05-27": {
-    "code": 51,
-    "precip": 1.1,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.1,
+    "mapped_status": 2
   },
   "2025-05-28": {
-    "code": 51,
-    "precip": 0.3,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.3,
+    "mapped_status": 2
   },
   "2025-05-29": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-05-30": {
-    "code": 51,
-    "precip": 0.3,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.3,
+    "mapped_status": 2
   },
   "2025-05-31": {
-    "code": 55,
-    "precip": 5.5,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 5.5,
+    "mapped_status": 2
   },
   "2025-06-01": {
-    "code": 51,
-    "precip": 0.5,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.5,
+    "mapped_status": 2
   },
   "2025-06-02": {
-    "code": 51,
-    "precip": 0.6,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.6,
+    "mapped_status": 2
   },
   "2025-06-03": {
-    "code": 53,
-    "precip": 2.1,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.1,
+    "mapped_status": 2
   },
   "2025-06-04": {
-    "code": 53,
-    "precip": 1.9,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.9,
+    "mapped_status": 2
   },
   "2025-06-05": {
-    "code": 63,
-    "precip": 11.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 11.0,
+    "mapped_status": 2
   },
   "2025-06-06": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-06-07": {
-    "code": 51,
-    "precip": 0.7,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.7,
+    "mapped_status": 2
   },
   "2025-06-08": {
-    "code": 51,
-    "precip": 1.3,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.3,
+    "mapped_status": 2
   },
   "2025-06-09": {
-    "code": 55,
-    "precip": 3.7,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 3.7,
+    "mapped_status": 2
   },
   "2025-06-10": {
-    "code": 63,
-    "precip": 17.3,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 17.3,
+    "mapped_status": 2
   },
   "2025-06-11": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-06-12": {
-    "code": 51,
-    "precip": 0.1,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.1,
+    "mapped_status": 2
   },
   "2025-06-13": {
-    "code": 51,
-    "precip": 0.9,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.9,
+    "mapped_status": 2
   },
   "2025-06-14": {
-    "code": 51,
-    "precip": 0.6,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.6,
+    "mapped_status": 2
   },
   "2025-06-15": {
-    "code": 51,
-    "precip": 1.8,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.8,
+    "mapped_status": 2
   },
   "2025-06-16": {
-    "code": 61,
-    "precip": 9.2,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 9.2,
+    "mapped_status": 2
   },
   "2025-06-17": {
-    "code": 65,
-    "precip": 55.5,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 55.5,
+    "mapped_status": 2
   },
   "2025-06-18": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-06-19": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-06-20": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-06-21": {
-    "code": 51,
-    "precip": 0.2,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.2,
+    "mapped_status": 2
   },
   "2025-06-22": {
-    "code": 61,
-    "precip": 3.9,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 3.9,
+    "mapped_status": 2
   },
   "2025-06-23": {
-    "code": 51,
-    "precip": 0.9,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.9,
+    "mapped_status": 2
   },
   "2025-06-24": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-06-25": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-06-26": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-06-27": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-06-28": {
-    "code": 55,
-    "precip": 3.9,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 3.9,
+    "mapped_status": 2
   },
   "2025-06-29": {
-    "code": 53,
-    "precip": 1.8,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.8,
+    "mapped_status": 2
   },
   "2025-06-30": {
-    "code": 61,
-    "precip": 4.4,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 4.4,
+    "mapped_status": 2
   },
   "2025-07-01": {
-    "code": 51,
-    "precip": 0.5,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.5,
+    "mapped_status": 2
   },
   "2025-07-02": {
-    "code": 51,
-    "precip": 0.4,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.4,
+    "mapped_status": 2
   },
   "2025-07-03": {
-    "code": 63,
-    "precip": 7.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.5,
+    "mapped_status": 2
   },
   "2025-07-04": {
-    "code": 63,
-    "precip": 13.2,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 13.2,
+    "mapped_status": 2
   },
   "2025-07-05": {
-    "code": 51,
-    "precip": 0.4,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.4,
+    "mapped_status": 2
   },
   "2025-07-06": {
-    "code": 53,
-    "precip": 1.1,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.1,
+    "mapped_status": 2
   },
   "2025-07-07": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-07-08": {
-    "code": 51,
-    "precip": 1.1,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.1,
+    "mapped_status": 2
   },
   "2025-07-09": {
-    "code": 51,
-    "precip": 0.5,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.5,
+    "mapped_status": 2
   },
   "2025-07-10": {
-    "code": 51,
-    "precip": 0.8,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.8,
+    "mapped_status": 2
   },
   "2025-07-11": {
-    "code": 61,
-    "precip": 3.9,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 3.9,
+    "mapped_status": 2
   },
   "2025-07-12": {
-    "code": 55,
-    "precip": 2.6,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 2.6,
+    "mapped_status": 2
   },
   "2025-07-13": {
-    "code": 51,
-    "precip": 2.7,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 2.7,
+    "mapped_status": 2
   },
   "2025-07-14": {
-    "code": 65,
-    "precip": 27.2,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 27.2,
+    "mapped_status": 2
   },
   "2025-07-15": {
-    "code": 51,
-    "precip": 0.1,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.1,
+    "mapped_status": 2
   },
   "2025-07-16": {
-    "code": 51,
-    "precip": 0.5,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.5,
+    "mapped_status": 2
   },
   "2025-07-17": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-07-18": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-07-19": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-07-20": {
-    "code": 51,
-    "precip": 1.0,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.0,
+    "mapped_status": 2
   },
   "2025-07-21": {
-    "code": 51,
-    "precip": 0.1,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.1,
+    "mapped_status": 2
   },
   "2025-07-22": {
-    "code": 51,
-    "precip": 0.6,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.6,
+    "mapped_status": 2
   },
   "2025-07-23": {
-    "code": 51,
-    "precip": 1.0,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.0,
+    "mapped_status": 2
   },
   "2025-07-24": {
-    "code": 61,
-    "precip": 5.0,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 5.0,
+    "mapped_status": 2
   },
   "2025-07-25": {
-    "code": 65,
-    "precip": 23.8,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 23.8,
+    "mapped_status": 2
   },
   "2025-07-26": {
-    "code": 63,
-    "precip": 6.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 6.6,
+    "mapped_status": 2
   },
   "2025-07-27": {
-    "code": 63,
-    "precip": 13.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 13.6,
+    "mapped_status": 2
   },
   "2025-07-28": {
-    "code": 53,
-    "precip": 3.2,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 3.2,
+    "mapped_status": 2
   },
   "2025-07-29": {
-    "code": 63,
-    "precip": 8.2,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 8.2,
+    "mapped_status": 2
   },
   "2025-07-30": {
-    "code": 61,
-    "precip": 6.6,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 6.6,
+    "mapped_status": 2
   },
   "2025-07-31": {
-    "code": 63,
-    "precip": 8.3,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 8.3,
+    "mapped_status": 2
   },
   "2025-08-01": {
-    "code": 65,
-    "precip": 15.0,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 15.0,
+    "mapped_status": 2
   },
   "2025-08-02": {
-    "code": 61,
-    "precip": 3.9,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 3.9,
+    "mapped_status": 2
   },
   "2025-08-03": {
-    "code": 51,
-    "precip": 0.2,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.2,
+    "mapped_status": 2
   },
   "2025-08-04": {
-    "code": 53,
-    "precip": 4.0,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 4.0,
+    "mapped_status": 2
   },
   "2025-08-05": {
-    "code": 51,
-    "precip": 0.5,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.5,
+    "mapped_status": 2
   },
   "2025-08-06": {
-    "code": 51,
-    "precip": 1.2,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.2,
+    "mapped_status": 2
   },
   "2025-08-07": {
-    "code": 63,
-    "precip": 7.8,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.8,
+    "mapped_status": 2
   },
   "2025-08-08": {
-    "code": 61,
-    "precip": 5.3,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 5.3,
+    "mapped_status": 2
   },
   "2025-08-09": {
-    "code": 51,
-    "precip": 0.5,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.5,
+    "mapped_status": 2
   },
   "2025-08-10": {
-    "code": 53,
-    "precip": 3.8,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 3.8,
+    "mapped_status": 2
   },
   "2025-08-11": {
-    "code": 63,
-    "precip": 11.2,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 11.2,
+    "mapped_status": 2
   },
   "2025-08-12": {
-    "code": 53,
-    "precip": 3.8,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 3.8,
+    "mapped_status": 2
   },
   "2025-08-13": {
-    "code": 53,
-    "precip": 1.6,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.6,
+    "mapped_status": 2
   },
   "2025-08-14": {
-    "code": 55,
-    "precip": 4.1,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 4.1,
+    "mapped_status": 2
   },
   "2025-08-15": {
-    "code": 63,
-    "precip": 5.2,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 5.2,
+    "mapped_status": 2
   },
   "2025-08-16": {
-    "code": 53,
-    "precip": 1.7,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.7,
+    "mapped_status": 2
   },
   "2025-08-17": {
-    "code": 65,
-    "precip": 20.0,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 20.0,
+    "mapped_status": 2
   },
   "2025-08-18": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-08-19": {
-    "code": 51,
-    "precip": 0.4,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.4,
+    "mapped_status": 2
   },
   "2025-08-20": {
-    "code": 51,
-    "precip": 0.1,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.1,
+    "mapped_status": 2
   },
   "2025-08-21": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-08-22": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-08-23": {
-    "code": 51,
-    "precip": 1.0,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.0,
+    "mapped_status": 2
   },
   "2025-08-24": {
-    "code": 55,
-    "precip": 2.5,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 2.5,
+    "mapped_status": 2
   },
   "2025-08-25": {
-    "code": 51,
-    "precip": 1.0,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.0,
+    "mapped_status": 2
   },
   "2025-08-26": {
-    "code": 51,
-    "precip": 0.1,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.1,
+    "mapped_status": 2
   },
   "2025-08-27": {
-    "code": 61,
-    "precip": 3.2,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 3.2,
+    "mapped_status": 2
   },
   "2025-08-28": {
-    "code": 53,
-    "precip": 3.7,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 3.7,
+    "mapped_status": 2
   },
   "2025-08-29": {
-    "code": 65,
-    "precip": 31.1,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 31.1,
+    "mapped_status": 2
   },
   "2025-08-30": {
-    "code": 65,
-    "precip": 12.1,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 12.1,
+    "mapped_status": 2
   },
   "2025-08-31": {
-    "code": 53,
-    "precip": 2.8,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.8,
+    "mapped_status": 2
   },
   "2025-09-01": {
-    "code": 65,
-    "precip": 16.1,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 16.1,
+    "mapped_status": 2
   },
   "2025-09-02": {
-    "code": 55,
-    "precip": 5.5,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 5.5,
+    "mapped_status": 2
   },
   "2025-09-03": {
-    "code": 65,
-    "precip": 15.5,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 15.5,
+    "mapped_status": 2
   },
   "2025-09-04": {
-    "code": 63,
-    "precip": 24.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 24.6,
+    "mapped_status": 2
   },
   "2025-09-05": {
-    "code": 65,
-    "precip": 16.8,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 16.8,
+    "mapped_status": 2
   },
   "2025-09-06": {
-    "code": 61,
-    "precip": 7.1,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 7.1,
+    "mapped_status": 2
   },
   "2025-09-07": {
-    "code": 55,
-    "precip": 6.6,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 6.6,
+    "mapped_status": 2
   },
   "2025-09-08": {
-    "code": 51,
-    "precip": 0.4,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.4,
+    "mapped_status": 2
   },
   "2025-09-09": {
-    "code": 63,
-    "precip": 7.8,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.8,
+    "mapped_status": 2
   },
   "2025-09-10": {
-    "code": 65,
-    "precip": 19.6,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 19.6,
+    "mapped_status": 2
   },
   "2025-09-11": {
-    "code": 61,
-    "precip": 7.4,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 7.4,
+    "mapped_status": 2
   },
   "2025-09-12": {
-    "code": 53,
-    "precip": 1.0,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.0,
+    "mapped_status": 2
   },
   "2025-09-13": {
-    "code": 53,
-    "precip": 4.0,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 4.0,
+    "mapped_status": 2
   },
   "2025-09-14": {
-    "code": 63,
-    "precip": 7.9,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.9,
+    "mapped_status": 2
   },
   "2025-09-15": {
-    "code": 61,
-    "precip": 6.4,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 6.4,
+    "mapped_status": 2
   },
   "2025-09-16": {
-    "code": 53,
-    "precip": 5.5,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 5.5,
+    "mapped_status": 2
   },
   "2025-09-17": {
-    "code": 55,
-    "precip": 6.0,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 6.0,
+    "mapped_status": 2
   },
   "2025-09-18": {
-    "code": 51,
-    "precip": 0.9,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.9,
+    "mapped_status": 2
   },
   "2025-09-19": {
-    "code": 63,
-    "precip": 28.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 28.7,
+    "mapped_status": 2
   },
   "2025-09-20": {
-    "code": 63,
-    "precip": 31.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 31.5,
+    "mapped_status": 2
   },
   "2025-09-21": {
-    "code": 55,
-    "precip": 2.6,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 2.6,
+    "mapped_status": 2
   },
   "2025-09-22": {
-    "code": 63,
-    "precip": 6.4,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 6.4,
+    "mapped_status": 2
   },
   "2025-09-23": {
-    "code": 63,
-    "precip": 6.8,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 6.8,
+    "mapped_status": 2
   },
   "2025-09-24": {
-    "code": 53,
-    "precip": 3.7,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 3.7,
+    "mapped_status": 2
   },
   "2025-09-25": {
-    "code": 65,
-    "precip": 13.1,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 13.1,
+    "mapped_status": 2
   },
   "2025-09-26": {
-    "code": 55,
-    "precip": 2.7,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 2.7,
+    "mapped_status": 2
   },
   "2025-09-27": {
-    "code": 63,
-    "precip": 10.8,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 10.8,
+    "mapped_status": 2
   },
   "2025-09-28": {
-    "code": 63,
-    "precip": 23.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 23.5,
+    "mapped_status": 2
   },
   "2025-09-29": {
-    "code": 51,
-    "precip": 0.7,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.7,
+    "mapped_status": 2
   },
   "2025-09-30": {
-    "code": 63,
-    "precip": 4.4,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 4.4,
+    "mapped_status": 2
   },
   "2025-10-01": {
-    "code": 63,
-    "precip": 16.3,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 16.3,
+    "mapped_status": 2
   },
   "2025-10-02": {
-    "code": 63,
-    "precip": 22.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 22.0,
+    "mapped_status": 2
   },
   "2025-10-03": {
-    "code": 63,
-    "precip": 7.9,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.9,
+    "mapped_status": 2
   },
   "2025-10-04": {
-    "code": 61,
-    "precip": 2.6,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 2.6,
+    "mapped_status": 2
   },
   "2025-10-05": {
-    "code": 51,
-    "precip": 0.1,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.1,
+    "mapped_status": 2
   },
   "2025-10-06": {
-    "code": 53,
-    "precip": 1.6,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.6,
+    "mapped_status": 2
   },
   "2025-10-07": {
-    "code": 51,
-    "precip": 0.4,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.4,
+    "mapped_status": 2
   },
   "2025-10-08": {
-    "code": 51,
-    "precip": 0.1,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.1,
+    "mapped_status": 2
   },
   "2025-10-09": {
-    "code": 65,
-    "precip": 11.6,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 11.6,
+    "mapped_status": 2
   },
   "2025-10-10": {
-    "code": 53,
-    "precip": 1.4,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.4,
+    "mapped_status": 2
   },
   "2025-10-11": {
-    "code": 53,
-    "precip": 2.4,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.4,
+    "mapped_status": 2
   },
   "2025-10-12": {
-    "code": 65,
-    "precip": 27.4,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 27.4,
+    "mapped_status": 2
   },
   "2025-10-13": {
-    "code": 51,
-    "precip": 0.7,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.7,
+    "mapped_status": 2
   },
   "2025-10-14": {
-    "code": 61,
-    "precip": 6.0,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 6.0,
+    "mapped_status": 2
   },
   "2025-10-15": {
-    "code": 55,
-    "precip": 4.8,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 4.8,
+    "mapped_status": 2
   },
   "2025-10-16": {
-    "code": 55,
-    "precip": 4.2,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 4.2,
+    "mapped_status": 2
   },
   "2025-10-17": {
-    "code": 65,
-    "precip": 18.6,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 18.6,
+    "mapped_status": 2
   },
   "2025-10-18": {
-    "code": 63,
-    "precip": 8.2,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 8.2,
+    "mapped_status": 2
   },
   "2025-10-19": {
-    "code": 63,
-    "precip": 18.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 18.0,
+    "mapped_status": 2
   },
   "2025-10-20": {
-    "code": 63,
-    "precip": 14.4,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 14.4,
+    "mapped_status": 2
   },
   "2025-10-21": {
-    "code": 51,
-    "precip": 1.0,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.0,
+    "mapped_status": 2
   },
   "2025-10-22": {
-    "code": 63,
-    "precip": 28.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 28.5,
+    "mapped_status": 2
   },
   "2025-10-23": {
-    "code": 53,
-    "precip": 1.0,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.0,
+    "mapped_status": 2
   },
   "2025-10-24": {
-    "code": 63,
-    "precip": 7.1,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.1,
+    "mapped_status": 2
   },
   "2025-10-25": {
-    "code": 53,
-    "precip": 1.2,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.2,
+    "mapped_status": 2
   },
   "2025-10-26": {
-    "code": 51,
-    "precip": 0.9,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.9,
+    "mapped_status": 2
   },
   "2025-10-27": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-10-28": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-10-29": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-10-30": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-10-31": {
-    "code": 51,
-    "precip": 0.3,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.3,
+    "mapped_status": 2
   },
   "2025-11-01": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-11-02": {
-    "code": 53,
-    "precip": 0.9,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 0.9,
+    "mapped_status": 2
   },
   "2025-11-03": {
-    "code": 51,
-    "precip": 0.1,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.1,
+    "mapped_status": 2
   },
   "2025-11-04": {
-    "code": 61,
-    "precip": 3.8,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 3.8,
+    "mapped_status": 2
   },
   "2025-11-05": {
-    "code": 65,
-    "precip": 15.3,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 15.3,
+    "mapped_status": 2
   },
   "2025-11-06": {
-    "code": 61,
-    "precip": 10.3,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 10.3,
+    "mapped_status": 2
   },
   "2025-11-07": {
-    "code": 61,
-    "precip": 8.6,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 8.6,
+    "mapped_status": 2
   },
   "2025-11-08": {
-    "code": 51,
-    "precip": 0.7,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.7,
+    "mapped_status": 2
   },
   "2025-11-09": {
-    "code": 65,
-    "precip": 14.3,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 14.3,
+    "mapped_status": 2
   },
   "2025-11-10": {
-    "code": 55,
-    "precip": 3.8,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 3.8,
+    "mapped_status": 2
   },
   "2025-11-11": {
-    "code": 63,
-    "precip": 25.8,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 25.8,
+    "mapped_status": 2
   },
   "2025-11-12": {
-    "code": 61,
-    "precip": 7.0,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 7.0,
+    "mapped_status": 2
   },
   "2025-11-13": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-11-14": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2025-11-15": {
-    "code": 63,
-    "precip": 14.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 14.6,
+    "mapped_status": 2
   },
   "2025-11-16": {
-    "code": 63,
-    "precip": 30.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 30.5,
+    "mapped_status": 2
   },
   "2025-11-17": {
-    "code": 63,
-    "precip": 35.8,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 35.8,
+    "mapped_status": 2
   },
   "2025-11-18": {
-    "code": 63,
-    "precip": 11.8,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 11.8,
+    "mapped_status": 2
   },
   "2025-11-19": {
-    "code": 63,
-    "precip": 23.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 23.7,
+    "mapped_status": 2
   },
   "2025-11-20": {
-    "code": 61,
-    "precip": 16.9,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 16.9,
+    "mapped_status": 2
   },
   "2025-11-21": {
-    "code": 63,
-    "precip": 23.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 23.0,
+    "mapped_status": 2
   },
   "2025-11-22": {
-    "code": 63,
-    "precip": 36.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 36.6,
+    "mapped_status": 2
   },
   "2025-11-23": {
-    "code": 63,
-    "precip": 59.8,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 59.8,
+    "mapped_status": 2
   },
   "2025-11-24": {
-    "code": 65,
-    "precip": 100.6,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 100.6,
+    "mapped_status": 2
   },
   "2025-11-25": {
-    "code": 65,
-    "precip": 76.3,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 76.3,
+    "mapped_status": 2
   },
   "2025-11-26": {
-    "code": 65,
-    "precip": 105.2,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 105.2,
+    "mapped_status": 2
   },
   "2025-11-27": {
-    "code": 65,
-    "precip": 178.4,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 178.4,
+    "mapped_status": 2
   },
   "2025-11-28": {
-    "code": 65,
-    "precip": 70.9,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 70.9,
+    "mapped_status": 2
   },
   "2025-11-29": {
-    "code": 53,
-    "precip": 2.9,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.9,
+    "mapped_status": 2
   },
   "2025-11-30": {
-    "code": 61,
-    "precip": 2.7,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 2.7,
+    "mapped_status": 2
   },
   "2025-12-01": {
-    "code": 51,
-    "precip": 0.6,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.6,
+    "mapped_status": 2
   },
   "2025-12-02": {
-    "code": 53,
-    "precip": 1.9,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.9,
+    "mapped_status": 2
   },
   "2025-12-03": {
-    "code": 65,
-    "precip": 11.9,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 11.9,
+    "mapped_status": 2
   },
   "2025-12-04": {
-    "code": 63,
-    "precip": 9.2,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 9.2,
+    "mapped_status": 2
   },
   "2025-12-05": {
-    "code": 63,
-    "precip": 9.1,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 9.1,
+    "mapped_status": 2
   },
   "2025-12-06": {
-    "code": 63,
-    "precip": 23.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 23.6,
+    "mapped_status": 2
   },
   "2025-12-07": {
-    "code": 65,
-    "precip": 30.3,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 30.3,
+    "mapped_status": 2
   },
   "2025-12-08": {
-    "code": 65,
-    "precip": 31.5,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 31.5,
+    "mapped_status": 2
   },
   "2025-12-09": {
-    "code": 63,
-    "precip": 17.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 17.5,
+    "mapped_status": 2
   },
   "2025-12-10": {
-    "code": 65,
-    "precip": 71.8,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 71.8,
+    "mapped_status": 2
   },
   "2025-12-11": {
-    "code": 63,
-    "precip": 18.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 18.6,
+    "mapped_status": 2
   },
   "2025-12-12": {
-    "code": 63,
-    "precip": 13.1,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 13.1,
+    "mapped_status": 2
   },
   "2025-12-13": {
-    "code": 53,
-    "precip": 2.5,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.5,
+    "mapped_status": 2
   },
   "2025-12-14": {
-    "code": 65,
-    "precip": 41.7,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 41.7,
+    "mapped_status": 2
   },
   "2025-12-15": {
-    "code": 65,
-    "precip": 45.1,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 45.1,
+    "mapped_status": 2
   },
   "2025-12-16": {
-    "code": 63,
-    "precip": 8.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 8.5,
+    "mapped_status": 2
   },
   "2025-12-17": {
-    "code": 63,
-    "precip": 18.2,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 18.2,
+    "mapped_status": 2
   },
   "2025-12-18": {
-    "code": 63,
-    "precip": 12.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 12.5,
+    "mapped_status": 2
   },
   "2025-12-19": {
-    "code": 63,
-    "precip": 23.2,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 23.2,
+    "mapped_status": 2
   },
   "2025-12-20": {
-    "code": 63,
-    "precip": 10.1,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 10.1,
+    "mapped_status": 2
   },
   "2025-12-21": {
-    "code": 63,
-    "precip": 14.8,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 14.8,
+    "mapped_status": 2
   },
   "2025-12-22": {
-    "code": 63,
-    "precip": 6.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 6.0,
+    "mapped_status": 2
   },
   "2025-12-23": {
-    "code": 63,
-    "precip": 10.9,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 10.9,
+    "mapped_status": 2
   },
   "2025-12-24": {
-    "code": 65,
-    "precip": 32.6,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 32.6,
+    "mapped_status": 2
   },
   "2025-12-25": {
-    "code": 65,
-    "precip": 34.5,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 34.5,
+    "mapped_status": 2
   },
   "2025-12-26": {
-    "code": 55,
-    "precip": 6.0,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 6.0,
+    "mapped_status": 2
   },
   "2025-12-27": {
-    "code": 63,
-    "precip": 13.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 13.7,
+    "mapped_status": 2
   },
   "2025-12-28": {
-    "code": 63,
-    "precip": 28.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 28.7,
+    "mapped_status": 2
   },
   "2025-12-29": {
-    "code": 63,
-    "precip": 12.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 12.7,
+    "mapped_status": 2
   },
   "2025-12-30": {
-    "code": 65,
-    "precip": 48.2,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 48.2,
+    "mapped_status": 2
   },
   "2025-12-31": {
-    "code": 51,
-    "precip": 1.6,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.6,
+    "mapped_status": 2
   },
   "2026-01-01": {
-    "code": 63,
-    "precip": 13.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 13.6,
+    "mapped_status": 2
   },
   "2026-01-02": {
-    "code": 63,
-    "precip": 28.4,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 28.4,
+    "mapped_status": 2
   },
   "2026-01-03": {
-    "code": 53,
-    "precip": 1.7,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.7,
+    "mapped_status": 2
   },
   "2026-01-04": {
-    "code": 51,
-    "precip": 0.3,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.3,
+    "mapped_status": 2
   },
   "2026-01-05": {
-    "code": 51,
-    "precip": 1.6,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.6,
+    "mapped_status": 2
   },
   "2026-01-06": {
-    "code": 65,
-    "precip": 25.9,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 25.9,
+    "mapped_status": 2
   },
   "2026-01-07": {
-    "code": 61,
-    "precip": 7.6,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 7.6,
+    "mapped_status": 2
   },
   "2026-01-08": {
-    "code": 61,
-    "precip": 3.5,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 3.5,
+    "mapped_status": 2
   },
   "2026-01-09": {
-    "code": 63,
-    "precip": 18.3,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 18.3,
+    "mapped_status": 2
   },
   "2026-01-10": {
-    "code": 63,
-    "precip": 11.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 11.5,
+    "mapped_status": 2
   },
   "2026-01-11": {
-    "code": 63,
-    "precip": 8.1,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 8.1,
+    "mapped_status": 2
   },
   "2026-01-12": {
-    "code": 53,
-    "precip": 3.3,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 3.3,
+    "mapped_status": 2
   },
   "2026-01-13": {
-    "code": 53,
-    "precip": 2.3,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.3,
+    "mapped_status": 2
   },
   "2026-01-14": {
-    "code": 51,
-    "precip": 1.1,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.1,
+    "mapped_status": 2
   },
   "2026-01-15": {
-    "code": 53,
-    "precip": 2.5,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.5,
+    "mapped_status": 2
   },
   "2026-01-16": {
-    "code": 51,
-    "precip": 0.5,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.5,
+    "mapped_status": 2
   },
   "2026-01-17": {
-    "code": 65,
-    "precip": 32.2,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 32.2,
+    "mapped_status": 2
   },
   "2026-01-18": {
-    "code": 51,
-    "precip": 1.3,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.3,
+    "mapped_status": 2
   },
   "2026-01-19": {
-    "code": 51,
-    "precip": 0.1,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.1,
+    "mapped_status": 2
   },
   "2026-01-20": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2026-01-21": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2026-01-22": {
-    "code": 51,
-    "precip": 0.2,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.2,
+    "mapped_status": 2
   },
   "2026-01-23": {
-    "code": 53,
-    "precip": 2.6,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.6,
+    "mapped_status": 2
   },
   "2026-01-24": {
-    "code": 51,
-    "precip": 0.3,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.3,
+    "mapped_status": 2
   },
   "2026-01-25": {
-    "code": 53,
-    "precip": 1.8,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.8,
+    "mapped_status": 2
   },
   "2026-01-26": {
-    "code": 53,
-    "precip": 3.0,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 3.0,
+    "mapped_status": 2
   },
   "2026-01-27": {
-    "code": 63,
-    "precip": 9.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 9.0,
+    "mapped_status": 2
   },
   "2026-01-28": {
-    "code": 63,
-    "precip": 11.4,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 11.4,
+    "mapped_status": 2
   },
   "2026-01-29": {
-    "code": 63,
-    "precip": 10.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 10.0,
+    "mapped_status": 2
   },
   "2026-01-30": {
-    "code": 55,
-    "precip": 3.2,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 3.2,
+    "mapped_status": 2
   },
   "2026-01-31": {
-    "code": 63,
-    "precip": 15.4,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 15.4,
+    "mapped_status": 2
   },
   "2026-02-01": {
-    "code": 61,
-    "precip": 11.6,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 11.6,
+    "mapped_status": 2
   },
   "2026-02-02": {
-    "code": 63,
-    "precip": 9.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 9.0,
+    "mapped_status": 2
   },
   "2026-02-03": {
-    "code": 63,
-    "precip": 13.2,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 13.2,
+    "mapped_status": 2
   },
   "2026-02-04": {
-    "code": 61,
-    "precip": 3.2,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 3.2,
+    "mapped_status": 2
   },
   "2026-02-05": {
-    "code": 61,
-    "precip": 2.9,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 2.9,
+    "mapped_status": 2
   },
   "2026-02-06": {
-    "code": 53,
-    "precip": 2.1,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.1,
+    "mapped_status": 2
   },
   "2026-02-07": {
-    "code": 61,
-    "precip": 6.6,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 6.6,
+    "mapped_status": 2
   },
   "2026-02-08": {
-    "code": 61,
-    "precip": 5.4,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 5.4,
+    "mapped_status": 2
   },
   "2026-02-09": {
-    "code": 55,
-    "precip": 3.8,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 3.8,
+    "mapped_status": 2
   },
   "2026-02-10": {
-    "code": 63,
-    "precip": 6.9,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 6.9,
+    "mapped_status": 2
   },
   "2026-02-11": {
-    "code": 53,
-    "precip": 4.4,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 4.4,
+    "mapped_status": 2
   },
   "2026-02-12": {
-    "code": 55,
-    "precip": 3.9,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 3.9,
+    "mapped_status": 2
   },
   "2026-02-13": {
-    "code": 63,
-    "precip": 17.3,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 17.3,
+    "mapped_status": 2
   },
   "2026-02-14": {
-    "code": 65,
-    "precip": 27.6,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 27.6,
+    "mapped_status": 2
   },
   "2026-02-15": {
-    "code": 65,
-    "precip": 21.5,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 21.5,
+    "mapped_status": 2
   },
   "2026-02-16": {
-    "code": 65,
-    "precip": 30.6,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 30.6,
+    "mapped_status": 2
   },
   "2026-02-17": {
-    "code": 63,
-    "precip": 11.3,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 11.3,
+    "mapped_status": 2
   },
   "2026-02-18": {
-    "code": 51,
-    "precip": 1.8,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.8,
+    "mapped_status": 2
   },
   "2026-02-19": {
-    "code": 53,
-    "precip": 1.8,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.8,
+    "mapped_status": 2
   },
   "2026-02-20": {
-    "code": 63,
-    "precip": 7.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.7,
+    "mapped_status": 2
   },
   "2026-02-21": {
-    "code": 61,
-    "precip": 5.9,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 5.9,
+    "mapped_status": 2
   },
   "2026-02-22": {
-    "code": 65,
-    "precip": 17.4,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 17.4,
+    "mapped_status": 2
   },
   "2026-02-23": {
-    "code": 53,
-    "precip": 3.3,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 3.3,
+    "mapped_status": 2
   },
   "2026-02-24": {
-    "code": 53,
-    "precip": 1.8,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.8,
+    "mapped_status": 2
   },
   "2026-02-25": {
-    "code": 63,
-    "precip": 7.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.0,
+    "mapped_status": 2
   },
   "2026-02-26": {
-    "code": 55,
-    "precip": 3.6,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 3.6,
+    "mapped_status": 2
   },
   "2026-02-27": {
-    "code": 51,
-    "precip": 1.2,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.2,
+    "mapped_status": 2
   },
   "2026-02-28": {
-    "code": 51,
-    "precip": 0.6,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.6,
+    "mapped_status": 2
   },
   "2026-03-01": {
-    "code": 3,
-    "precip": 0.0,
-    "mapped": 1
+    "wmo_code": 3,
+    "precipitation_mm": 0.0,
+    "mapped_status": 1
   },
   "2026-03-02": {
-    "code": 51,
-    "precip": 0.3,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.3,
+    "mapped_status": 2
   },
   "2026-03-03": {
-    "code": 63,
-    "precip": 19.3,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 19.3,
+    "mapped_status": 2
   },
   "2026-03-04": {
-    "code": 61,
-    "precip": 4.7,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 4.7,
+    "mapped_status": 2
   },
   "2026-03-05": {
-    "code": 55,
-    "precip": 4.3,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 4.3,
+    "mapped_status": 2
   },
   "2026-03-06": {
-    "code": 65,
-    "precip": 26.8,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 26.8,
+    "mapped_status": 2
   },
   "2026-03-07": {
-    "code": 53,
-    "precip": 3.2,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 3.2,
+    "mapped_status": 2
   },
   "2026-03-08": {
-    "code": 61,
-    "precip": 8.2,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 8.2,
+    "mapped_status": 2
   },
   "2026-03-09": {
-    "code": 65,
-    "precip": 31.2,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 31.2,
+    "mapped_status": 2
   },
   "2026-03-10": {
-    "code": 61,
-    "precip": 5.2,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 5.2,
+    "mapped_status": 2
   },
   "2026-03-11": {
-    "code": 53,
-    "precip": 2.9,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.9,
+    "mapped_status": 2
   },
   "2026-03-12": {
-    "code": 51,
-    "precip": 0.1,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.1,
+    "mapped_status": 2
   },
   "2026-03-13": {
-    "code": 63,
-    "precip": 10.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 10.5,
+    "mapped_status": 2
   },
   "2026-03-14": {
-    "code": 63,
-    "precip": 20.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 20.7,
+    "mapped_status": 2
   },
   "2026-03-15": {
-    "code": 63,
-    "precip": 23.3,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 23.3,
+    "mapped_status": 2
   },
   "2026-03-16": {
-    "code": 63,
-    "precip": 20.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 20.5,
+    "mapped_status": 2
   },
   "2026-03-17": {
-    "code": 63,
-    "precip": 12.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 12.6,
+    "mapped_status": 2
   },
   "2026-03-18": {
-    "code": 63,
-    "precip": 7.3,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.3,
+    "mapped_status": 2
   },
   "2026-03-19": {
-    "code": 61,
-    "precip": 4.0,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 4.0,
+    "mapped_status": 2
   },
   "2026-03-20": {
-    "code": 63,
-    "precip": 4.0,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 4.0,
+    "mapped_status": 2
   },
   "2026-03-21": {
-    "code": 63,
-    "precip": 18.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 18.5,
+    "mapped_status": 2
   },
   "2026-03-22": {
-    "code": 61,
-    "precip": 6.4,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 6.4,
+    "mapped_status": 2
   },
   "2026-03-23": {
-    "code": 53,
-    "precip": 2.6,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.6,
+    "mapped_status": 2
   },
   "2026-03-24": {
-    "code": 63,
-    "precip": 7.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.6,
+    "mapped_status": 2
   },
   "2026-03-25": {
-    "code": 61,
-    "precip": 3.3,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 3.3,
+    "mapped_status": 2
   },
   "2026-03-26": {
-    "code": 53,
-    "precip": 4.3,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 4.3,
+    "mapped_status": 2
   },
   "2026-03-27": {
-    "code": 63,
-    "precip": 8.6,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 8.6,
+    "mapped_status": 2
   },
   "2026-03-28": {
-    "code": 63,
-    "precip": 6.1,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 6.1,
+    "mapped_status": 2
   },
   "2026-03-29": {
-    "code": 53,
-    "precip": 2.2,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.2,
+    "mapped_status": 2
   },
   "2026-03-30": {
-    "code": 53,
-    "precip": 1.8,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 1.8,
+    "mapped_status": 2
   },
   "2026-03-31": {
-    "code": 61,
-    "precip": 6.8,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 6.8,
+    "mapped_status": 2
   },
   "2026-04-01": {
-    "code": 65,
-    "precip": 40.9,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 40.9,
+    "mapped_status": 2
   },
   "2026-04-02": {
-    "code": 51,
-    "precip": 1.2,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.2,
+    "mapped_status": 2
   },
   "2026-04-03": {
-    "code": 63,
-    "precip": 13.4,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 13.4,
+    "mapped_status": 2
   },
   "2026-04-04": {
-    "code": 63,
-    "precip": 5.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 5.7,
+    "mapped_status": 2
   },
   "2026-04-05": {
-    "code": 61,
-    "precip": 5.0,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 5.0,
+    "mapped_status": 2
   },
   "2026-04-06": {
-    "code": 55,
-    "precip": 5.5,
-    "mapped": 2
+    "wmo_code": 55,
+    "precipitation_mm": 5.5,
+    "mapped_status": 2
   },
   "2026-04-07": {
-    "code": 51,
-    "precip": 1.8,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.8,
+    "mapped_status": 2
   },
   "2026-04-08": {
-    "code": 51,
-    "precip": 0.3,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.3,
+    "mapped_status": 2
   },
   "2026-04-09": {
-    "code": 51,
-    "precip": 1.6,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.6,
+    "mapped_status": 2
   },
   "2026-04-10": {
-    "code": 51,
-    "precip": 1.5,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 1.5,
+    "mapped_status": 2
   },
   "2026-04-11": {
-    "code": 65,
-    "precip": 16.5,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 16.5,
+    "mapped_status": 2
   },
   "2026-04-12": {
-    "code": 61,
-    "precip": 3.8,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 3.8,
+    "mapped_status": 2
   },
   "2026-04-13": {
-    "code": 63,
-    "precip": 19.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 19.5,
+    "mapped_status": 2
   },
   "2026-04-14": {
-    "code": 65,
-    "precip": 34.8,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 34.8,
+    "mapped_status": 2
   },
   "2026-04-15": {
-    "code": 61,
-    "precip": 8.3,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 8.3,
+    "mapped_status": 2
   },
   "2026-04-16": {
-    "code": 61,
-    "precip": 5.8,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 5.8,
+    "mapped_status": 2
   },
   "2026-04-17": {
-    "code": 53,
-    "precip": 2.6,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 2.6,
+    "mapped_status": 2
   },
   "2026-04-18": {
-    "code": 63,
-    "precip": 8.2,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 8.2,
+    "mapped_status": 2
   },
   "2026-04-19": {
-    "code": 63,
-    "precip": 10.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 10.7,
+    "mapped_status": 2
   },
   "2026-04-20": {
-    "code": 65,
-    "precip": 19.5,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 19.5,
+    "mapped_status": 2
   },
   "2026-04-21": {
-    "code": 63,
-    "precip": 9.5,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 9.5,
+    "mapped_status": 2
   },
   "2026-04-22": {
-    "code": 63,
-    "precip": 15.7,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 15.7,
+    "mapped_status": 2
   },
   "2026-04-23": {
-    "code": 51,
-    "precip": 0.5,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.5,
+    "mapped_status": 2
   },
   "2026-04-24": {
-    "code": 63,
-    "precip": 7.3,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 7.3,
+    "mapped_status": 2
   },
   "2026-04-25": {
-    "code": 65,
-    "precip": 19.1,
-    "mapped": 2
+    "wmo_code": 65,
+    "precipitation_mm": 19.1,
+    "mapped_status": 2
   },
   "2026-04-26": {
-    "code": 61,
-    "precip": 8.3,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 8.3,
+    "mapped_status": 2
   },
   "2026-04-27": {
-    "code": 53,
-    "precip": 0.9,
-    "mapped": 2
+    "wmo_code": 53,
+    "precipitation_mm": 0.9,
+    "mapped_status": 2
   },
   "2026-04-28": {
-    "code": 51,
-    "precip": 0.8,
-    "mapped": 2
+    "wmo_code": 51,
+    "precipitation_mm": 0.8,
+    "mapped_status": 2
   },
   "2026-04-29": {
-    "code": 63,
-    "precip": 15.9,
-    "mapped": 2
+    "wmo_code": 63,
+    "precipitation_mm": 15.9,
+    "mapped_status": 2
   },
   "2026-04-30": {
-    "code": 61,
-    "precip": 9.2,
-    "mapped": 2
+    "wmo_code": 61,
+    "precipitation_mm": 9.2,
+    "mapped_status": 2
   }
 }

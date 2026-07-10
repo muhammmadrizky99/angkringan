@@ -84,12 +84,14 @@ router.post('/', authenticate, async (req: AuthRequest, res: any, next: any) => 
                 ...(weather !== undefined && { weather }),
                 ...(event !== undefined && { event }),
                 ...(eventNote !== undefined && { eventNote }),
+                createdAt: new Date(),
             },
             create: {
                 date: recordDate,
                 weather: weather ?? 0,
                 event: event ?? 0,
                 eventNote: eventNote ?? null,
+                createdAt: new Date(),
             },
         });
 
@@ -109,11 +111,15 @@ router.post('/fetch-weather', authenticate, async (_req: AuthRequest, res: any, 
 
         const record = await prisma.dailyRecord.upsert({
             where: { date: today },
-            update: { weather: weatherData.weather },
+            update: { 
+                weather: weatherData.weather,
+                createdAt: new Date(),
+            },
             create: {
                 date: today,
                 weather: weatherData.weather,
                 event: 0,
+                createdAt: new Date(),
             },
         });
 

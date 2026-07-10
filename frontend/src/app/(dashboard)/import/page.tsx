@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import api from '@/lib/api';
 import toast from 'react-hot-toast';
-import { FiUpload, FiFileText, FiCheckCircle, FiAlertCircle, FiInfo } from 'react-icons/fi';
+import { FiUpload, FiFileText, FiCheckCircle, FiAlertCircle, FiInfo, FiDownload } from 'react-icons/fi';
 
 export default function ImportPage() {
     const [file, setFile] = useState<File | null>(null);
@@ -42,6 +42,24 @@ export default function ImportPage() {
         }
     };
 
+    const handleDownloadTemplate = async () => {
+        try {
+            const res = await api.get('/import/template', {
+                responseType: 'blob'
+            });
+            const url = window.URL.createObjectURL(new Blob([res.data]));
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'template_import_angkringan.xlsx');
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            toast.success('Template impor berhasil diunduh!');
+        } catch (err) {
+            toast.error('Gagal mengunduh template impor');
+        }
+    };
+
     return (
         <div className="max-w-4xl mx-auto space-y-6">
             <div className="flex flex-col gap-1">
@@ -52,19 +70,38 @@ export default function ImportPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {/* Instruksi Card */}
                 <div className="lg:col-span-1 space-y-4">
-                    <div className="card bg-blue-50 border-blue-100">
+                    <div className="card bg-blue-50/50 border-blue-100">
                         <div className="flex gap-3">
                             <FiInfo className="text-blue-500 mt-1 flex-shrink-0" size={20} />
                             <div>
                                 <h3 className="font-semibold text-blue-900 mb-2">Panduan Import</h3>
-                                <ul className="text-sm text-blue-800 space-y-2 list-disc pl-4">
+                                <ul className="text-sm text-blue-800 space-y-2.5 list-disc pl-4">
                                     <li>Format file: <strong>.xlsx</strong> atau <strong>.csv</strong></li>
                                     <li>Kolom pertama harus bernama <strong>tanggal</strong> (format: YYYY-MM-DD)</li>
                                     <li>Nama kolom lainnya harus sesuai dengan nama teknis produk (contoh: <code>buntut</code>, <code>bakso</code>, <code>ceker</code>)</li>
-                                    <li>Baris berisi jumlah terjual setiap harinya</li>
+                                    <li>Setiap baris berisi jumlah porsi terjual per hari</li>
                                 </ul>
                             </div>
                         </div>
+                    </div>
+
+                    {/* Template Card */}
+                    <div className="card border border-dark-100 flex flex-col gap-3">
+                        <div className="flex items-center gap-2">
+                            <div className="p-1.5 bg-green-50 text-green-600 rounded-lg">
+                                <FiFileText size={18} />
+                            </div>
+                            <h4 className="font-semibold text-dark-800 text-sm">Unduh File Template</h4>
+                        </div>
+                        <p className="text-xs text-dark-500 leading-relaxed">
+                            Gunakan template Excel resmi kami agar penulisan nama kolom produk dan format tanggal cocok 100% dengan database.
+                        </p>
+                        <button 
+                            onClick={handleDownloadTemplate}
+                            className="w-full btn-success py-2.5 text-xs flex items-center justify-center gap-1.5 font-bold shadow-sm shadow-green-500/10"
+                        >
+                            <FiDownload size={14} /> Download Template Excel
+                        </button>
                     </div>
                 </div>
 

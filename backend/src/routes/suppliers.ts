@@ -45,6 +45,15 @@ router.post(
             }
 
             const { name, phone, address } = req.body;
+
+            const existingSupplier = await prisma.supplier.findFirst({
+                where: { name: name }
+            });
+
+            if (existingSupplier) {
+                return res.status(400).json({ success: false, message: 'Supplier dengan nama tersebut sudah ada' });
+            }
+
             const supplier = await prisma.supplier.create({
                 data: { name, phone, address },
             });
@@ -74,6 +83,18 @@ router.put(
 
             const supplier = await prisma.supplier.findUnique({ where: { id: req.params.id } });
             if (!supplier) throw new AppError('Supplier tidak ditemukan', 404);
+
+            if (req.body.name) {
+                const existingSupplier = await prisma.supplier.findFirst({
+                    where: { 
+                        name: req.body.name,
+                        id: { not: req.params.id }
+                    }
+                });
+                if (existingSupplier) {
+                    return res.status(400).json({ success: false, message: 'Supplier dengan nama tersebut sudah ada' });
+                }
+            }
 
             const updated = await prisma.supplier.update({
                 where: { id: req.params.id },

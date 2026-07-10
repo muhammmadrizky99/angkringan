@@ -87,7 +87,7 @@ export default function UsersPage() {
                 <div className="card p-0">
                     <div className="table-container">
                         <table>
-                            <thead><tr><th>Nama</th><th>Email</th><th>Role</th><th>Dibuat</th><th>Aksi</th></tr></thead>
+                            <thead><tr><th>Nama</th><th>Email</th><th>Role</th><th>Dibuat</th><th className="text-center">Aksi</th></tr></thead>
                             <tbody>
                                 {users.map((u) => (
                                     <tr key={u.id}>
@@ -99,8 +99,8 @@ export default function UsersPage() {
                                             </span>
                                         </td>
                                         <td>{new Date(u.createdAt).toLocaleDateString('id-ID')}</td>
-                                        <td>
-                                            <div className="flex gap-2">
+                                        <td className="text-center">
+                                            <div className="flex justify-center items-center gap-2">
                                                 <button onClick={() => openModal(u)} className="p-2 rounded-lg hover:bg-blue-50 text-blue-500 transition-colors"><FiEdit2 size={16} /></button>
                                                 <button onClick={() => setDeleteTarget(u)} className="p-2 rounded-lg hover:bg-red-50 text-red-500 transition-colors"><FiTrash2 size={16} /></button>
                                             </div>

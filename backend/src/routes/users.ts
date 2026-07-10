@@ -48,6 +48,9 @@ router.post(
             const existing = await prisma.user.findUnique({ where: { email } });
             if (existing) throw new AppError('Email sudah terdaftar', 400);
 
+            const existingName = await prisma.user.findFirst({ where: { name } });
+            if (existingName) throw new AppError('Nama pengguna sudah terdaftar', 400);
+
             const hashedPassword = await bcrypt.hash(password, 10);
             const user = await prisma.user.create({
                 data: { name, email, password: hashedPassword, role },
@@ -82,6 +85,21 @@ router.put(
             if (!user) throw new AppError('User tidak ditemukan', 404);
 
             const data: any = { ...req.body };
+            
+            if (data.email) {
+                const existingEmail = await prisma.user.findFirst({
+                    where: { email: data.email, id: { not: req.params.id } }
+                });
+                if (existingEmail) throw new AppError('Email sudah terdaftar untuk pengguna lain', 400);
+            }
+
+            if (data.name) {
+                const existingName = await prisma.user.findFirst({
+                    where: { name: data.name, id: { not: req.params.id } }
+                });
+                if (existingName) throw new AppError('Nama pengguna sudah terdaftar', 400);
+            }
+
             if (data.password) {
                 data.password = await bcrypt.hash(data.password, 10);
             }

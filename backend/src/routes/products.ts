@@ -50,8 +50,22 @@ router.post(
             }
 
             const { name, category, price, currentStock } = req.body;
+
+            const existingProduct = await prisma.product.findFirst({
+                where: { name: name }
+            });
+
+            if (existingProduct) {
+                return res.status(400).json({ success: false, message: 'Produk dengan nama tersebut sudah ada' });
+            }
+
             const product = await prisma.product.create({
-                data: { name, category, price, currentStock },
+                data: { 
+                    name, 
+                    category, 
+                    price: Number(price), 
+                    currentStock: Number(currentStock) 
+                },
             });
             res.status(201).json({ success: true, data: product });
         } catch (error) {
@@ -81,9 +95,26 @@ router.put(
             const product = await prisma.product.findUnique({ where: { id: req.params.id } });
             if (!product) throw new AppError('Produk tidak ditemukan', 404);
 
+            const updateData: any = { ...req.body };
+
+            if (updateData.name) {
+                const existingProduct = await prisma.product.findFirst({
+                    where: { 
+                        name: updateData.name,
+                        id: { not: req.params.id }
+                    }
+                });
+                if (existingProduct) {
+                    return res.status(400).json({ success: false, message: 'Produk dengan nama tersebut sudah ada' });
+                }
+            }
+
+            if (updateData.price !== undefined) updateData.price = Number(updateData.price);
+            if (updateData.currentStock !== undefined) updateData.currentStock = Number(updateData.currentStock);
+
             const updated = await prisma.product.update({
                 where: { id: req.params.id },
-                data: req.body,
+                data: updateData,
             });
             res.json({ success: true, data: updated });
         } catch (error) {

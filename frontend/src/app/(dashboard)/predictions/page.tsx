@@ -22,9 +22,9 @@ interface Prediction {
 }
 
 const WEATHER_OPTIONS = [
-    { value: 0, label: 'Cerah', icon: FiSun, color: 'text-yellow-500', bg: 'bg-yellow-50 border-yellow-200', activeBg: 'bg-yellow-100 border-yellow-400 ring-2 ring-yellow-200', emoji: '☀️' },
-    { value: 1, label: 'Berawan', icon: FiCloud, color: 'text-gray-500', bg: 'bg-gray-50 border-gray-200', activeBg: 'bg-gray-100 border-gray-400 ring-2 ring-gray-200', emoji: '⛅' },
-    { value: 2, label: 'Hujan', icon: FiCloudRain, color: 'text-blue-500', bg: 'bg-blue-50 border-blue-200', activeBg: 'bg-blue-100 border-blue-400 ring-2 ring-blue-200', emoji: '🌧️' },
+    { value: 0, label: 'Cerah', icon: FiSun, color: 'text-yellow-500', bg: 'bg-yellow-50 border-yellow-200', activeBg: 'bg-yellow-100 border-yellow-400 ring-2 ring-yellow-200' },
+    { value: 1, label: 'Berawan', icon: FiCloud, color: 'text-gray-500', bg: 'bg-gray-50 border-gray-200', activeBg: 'bg-gray-100 border-gray-400 ring-2 ring-gray-200' },
+    { value: 2, label: 'Hujan', icon: FiCloudRain, color: 'text-blue-500', bg: 'bg-blue-50 border-blue-200', activeBg: 'bg-blue-100 border-blue-400 ring-2 ring-blue-200' },
 ];
 
 export default function PredictionsPage() {
@@ -73,7 +73,7 @@ export default function PredictionsPage() {
                 event: isEvent ? 1 : 0,
             });
             setPredictions(res.data.data);
-            toast.success(`Prediksi berhasil! (${WEATHER_OPTIONS[selectedWeather].emoji} ${WEATHER_OPTIONS[selectedWeather].label})`);
+            toast.success(`Prediksi berhasil! (${WEATHER_OPTIONS[selectedWeather].label})`);
         } catch (err: any) {
             toast.error(err.response?.data?.message || 'Gagal generate prediksi');
         } finally {
@@ -90,9 +90,9 @@ export default function PredictionsPage() {
 
     const getMethodBadge = (method: string | null) => {
         switch (method) {
-            case 'xgboost': return <span className="badge-primary text-[10px]">⚡ XGBoost</span>;
-            case 'simple_average': return <span className="badge-warning text-[10px]">📊 Rata-rata</span>;
-            case 'moving_average_fallback': return <span className="badge bg-orange-50 text-orange-700 border border-orange-100 text-[10px]">↩ Fallback</span>;
+            case 'xgboost': return <span className="badge-primary text-[10px]">XGBoost</span>;
+            case 'simple_average': return <span className="badge-warning text-[10px]">Rata-rata</span>;
+            case 'moving_average_fallback': return <span className="badge bg-orange-50 text-orange-700 border border-orange-100 text-[10px]">Fallback</span>;
             default: return <span className="badge bg-gray-50 text-gray-600 border border-gray-100 text-[10px]">{method || 'N/A'}</span>;
         }
     };
@@ -144,7 +144,7 @@ export default function PredictionsPage() {
                                         className={`flex-1 flex flex-col items-center gap-2 py-4 px-3 rounded-xl border-2 font-semibold text-sm transition-all duration-200
                                             ${isActive ? opt.activeBg : opt.bg + ' hover:opacity-80'}`}
                                     >
-                                        <span className="text-2xl">{opt.emoji}</span>
+                                        <Icon size={24} className={opt.color} />
                                         <span className={`text-xs ${isActive ? 'text-dark-900' : 'text-dark-500'}`}>{opt.label}</span>
                                     </button>
                                 );

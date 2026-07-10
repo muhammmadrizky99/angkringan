@@ -11,6 +11,7 @@ interface DailyRecord {
     weather: number;
     event: number;
     eventNote: string | null;
+    createdAt?: string;
 }
 
 const WEATHER_LABELS = [
@@ -109,6 +110,11 @@ export default function DailyRecordsPage() {
                                                 {todayRecord.eventNote || 'Ada Event'}
                                             </span>
                                         )}
+                                        {todayRecord.createdAt && (
+                                            <span className="text-[10px] text-dark-400 mt-1 font-semibold flex items-center gap-1">
+                                                ⏰ Waktu Catat: {new Date(todayRecord.createdAt).toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' })} WIB
+                                            </span>
+                                        )}
                                     </div>
                                 );
                             })()}
@@ -177,14 +183,26 @@ export default function DailyRecordsPage() {
                     ) : (
                         <div className="table-container border-0 rounded-none max-h-[500px] overflow-y-auto">
                             <table>
-                                <thead><tr><th>Tanggal</th><th>Cuaca</th><th>Event</th></tr></thead>
+                                <thead><tr><th>Tanggal / Jam</th><th>Cuaca</th><th>Event</th></tr></thead>
                                 <tbody>
                                     {records.slice(0, 30).map((r) => {
                                         const w = WEATHER_LABELS[r.weather];
                                         const Icon = w.icon;
                                         return (
                                             <tr key={r.id}>
-                                                <td className="text-sm">{new Date(r.date).toLocaleDateString('id-ID', { day: '2-digit', month: 'short' })}</td>
+                                                <td className="text-sm">
+                                                    <div className="font-semibold text-dark-800">
+                                                        {new Date(r.date).toLocaleDateString('id-ID', { day: '2-digit', month: 'short' })}
+                                                    </div>
+                                                    {r.createdAt && (
+                                                        <div className="text-[10px] text-dark-400 mt-0.5 font-medium flex items-center gap-0.5">
+                                                            <span>Jam:</span>
+                                                            <span className="text-primary-600 font-semibold">
+                                                                {new Date(r.createdAt).toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' })}
+                                                            </span>
+                                                        </div>
+                                                    )}
+                                                </td>
                                                 <td>
                                                     <span className={`flex items-center gap-1 text-xs font-semibold ${w.color}`}>
                                                         <Icon size={12} /> {w.label}

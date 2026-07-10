@@ -35,21 +35,21 @@ export default function LoginPage() {
 
     return (
         <div className="min-h-screen flex">
-            <Toaster position="top-right" toastOptions={{ className: 'toast-custom' }} />
+            <Toaster position="top-right" toastOptions={{ className: 'toast-custom', duration: 3000 }} />
 
             {/* Left Panel — Hero */}
             <div className="hidden lg:flex lg:w-[55%] relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
                 {/* Decorative circles */}
-                <div className="absolute top-20 left-20 w-72 h-72 bg-primary-500 rounded-full opacity-[0.08] blur-3xl" />
-                <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-400 rounded-full opacity-[0.06] blur-3xl" />
-                <div className="absolute top-1/2 left-1/3 w-40 h-40 bg-accent-500 rounded-full opacity-[0.05] blur-2xl" />
+                <div className="absolute top-20 left-20 w-72 h-72 bg-amber-500 rounded-full opacity-[0.1] blur-3xl" />
+                <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-600 rounded-full opacity-[0.08] blur-3xl" />
+                <div className="absolute top-1/2 left-1/3 w-40 h-40 bg-yellow-500 rounded-full opacity-[0.06] blur-2xl" />
 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col justify-between p-12 w-full">
                     {/* Top — Logo */}
                     <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center shadow-lg shadow-primary-500/30">
-                            <span className="text-white font-bold text-xl">A</span>
+                        <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg shadow-primary-500/30">
+                            <img src="/images/logo.png" alt="Logo" className="w-full h-full object-cover" />
                         </div>
                         <div>
                             <h2 className="text-white text-lg font-bold">Angkringan Agoy</h2>
@@ -100,8 +100,8 @@ export default function LoginPage() {
             <div className="w-full lg:w-[45%] flex items-center justify-center bg-white p-6 lg:p-12 relative">
                 {/* Mobile logo */}
                 <div className="lg:hidden absolute top-8 left-6 flex items-center gap-2">
-                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
-                        <span className="text-white font-bold text-sm">A</span>
+                    <div className="w-9 h-9 rounded-lg overflow-hidden">
+                        <img src="/images/logo.png" alt="Logo" className="w-full h-full object-cover" />
                     </div>
                     <span className="font-bold text-dark-900">Angkringan Agoy</span>
                 </div>
@@ -165,25 +165,6 @@ export default function LoginPage() {
                             )}
                         </button>
                     </form>
-
-                    {/* Demo credentials */}
-                    <div className="mt-8 p-4 rounded-xl bg-slate-50 border border-slate-100">
-                        <p className="text-xs font-semibold text-dark-500 mb-2.5 uppercase tracking-wide">Akun Demo</p>
-                        <div className="space-y-1.5 text-xs text-dark-400">
-                            <div className="flex items-center justify-between">
-                                <span>Superadmin</span>
-                                <code className="text-primary-600 bg-primary-50 px-2 py-0.5 rounded text-[11px]">superadmin@angkringan.com</code>
-                            </div>
-                            <div className="flex items-center justify-between">
-                                <span>Admin</span>
-                                <code className="text-primary-600 bg-primary-50 px-2 py-0.5 rounded text-[11px]">admin@angkringan.com</code>
-                            </div>
-                            <div className="flex items-center justify-between">
-                                <span>Password</span>
-                                <code className="text-primary-600 bg-primary-50 px-2 py-0.5 rounded text-[11px]">password123</code>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

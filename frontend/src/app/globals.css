@@ -5,16 +5,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --gradient-primary: linear-gradient(135deg, #ee7711 0%, #f19332 50%, #f6ba6d 100%);
-  --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-  --gradient-accent: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
-  --gradient-warm: linear-gradient(135deg, #ee7711 0%, #df5d07 100%);
-  --gradient-hero: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
-  --shadow-glow: 0 0 20px rgba(238, 119, 17, 0.15);
-  --shadow-glow-accent: 0 0 20px rgba(34, 197, 94, 0.15);
-  --shadow-soft: 0 2px 20px rgba(15, 23, 42, 0.06);
-  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.03);
-  --shadow-card-hover: 0 4px 24px rgba(15, 23, 42, 0.08), 0 1px 4px rgba(15, 23, 42, 0.04);
+  --gradient-primary: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%); /* Amber to Coffee */
+  --gradient-dark: linear-gradient(135deg, #0a0a0f 0%, #171721 50%, #262636 100%);
+  --gradient-accent: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+  --gradient-warm: linear-gradient(135deg, #f59e0b 0%, #7c2d12 100%);
+  --gradient-hero: linear-gradient(135deg, #0c0a09 0%, #1c1917 40%, #292524 100%); /* Warm dark espresso */
+  --shadow-glow: 0 0 25px rgba(245, 158, 11, 0.25);
+  --shadow-glow-accent: 0 0 20px rgba(234, 88, 12, 0.2);
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-card-hover: 0 10px 30px rgba(0, 0, 0, 0.12), 0 1px 8px rgba(0, 0, 0, 0.06);
+  
+  /* Brand Colors */
+  --color-primary: #f59e0b;
+  --color-warm-bg: #faf7f5;
 }
 
 * {
@@ -25,8 +29,8 @@
 
 body {
   font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-  background-color: #f8fafc;
-  color: #0f172a;
+  background-color: var(--color-warm-bg);
+  color: #1c1917;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

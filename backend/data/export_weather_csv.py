@@ -53,7 +53,7 @@ def export_json_to_csv():
     
     for dt_str in sorted_dates:
         dt_obj = datetime.strptime(dt_str, '%Y-%m-%d')
-        mapped_status = weather_data[dt_str]['mapped']
+        mapped_status = weather_data[dt_str]['mapped_status']
         
         # Cek event
         event_note, event_flag = events.get(dt_str, ("", 0))
@@ -83,7 +83,7 @@ def export_json_to_csv():
         writer.writerows(test_rows)
 
     print("-" * 60)
-    print("✅ PROSES ETL SELESAI!")
+    print("[SUKSES] PROSES ETL SELESAI!")
     print(f"   - Dataset Training : {train_csv_path}")
     print(f"   - Dataset Testing  : {test_csv_path}")
     print("=" * 60)

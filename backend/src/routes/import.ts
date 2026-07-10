@@ -33,6 +33,97 @@ const COLUMN_TO_DB_NAME: { [key: string]: string } = {
     'risol_cumi_asin': 'Rais Boll Cumi Asin'
 };
 
+// GET /api/import/template
+router.get('/template', authenticate, async (req: AuthRequest, res: any, next: any) => {
+    try {
+        const headers = [
+            'tanggal',
+            'buntut',
+            'telur_puyuh',
+            'tahu',
+            'ampela',
+            'usus',
+            'ceker',
+            'leher',
+            'cikua',
+            'sosis_kecil',
+            'sosis_besar',
+            'bakso',
+            'rais_boll_ayam_suwir',
+            'rais_boll_cumi_asin',
+            'tahu_bacem',
+            'tempe_bacem',
+            'nasi_kucing_ayam_suwir',
+            'nasi_kucing_cumi_asin'
+        ];
+
+        const rows = [
+            {
+                tanggal: '2026-05-01',
+                buntut: 12,
+                telur_puyuh: 15,
+                tahu: 8,
+                ampela: 10,
+                usus: 20,
+                ceker: 15,
+                leher: 5,
+                cikua: 10,
+                sosis_kecil: 12,
+                sosis_besar: 8,
+                bakso: 15,
+                rais_boll_ayam_suwir: 10,
+                rais_boll_cumi_asin: 12,
+                tahu_bacem: 6,
+                tempe_bacem: 8,
+                nasi_kucing_ayam_suwir: 15,
+                nasi_kucing_cumi_asin: 15
+            },
+            {
+                tanggal: '2026-05-02',
+                buntut: 8,
+                telur_puyuh: 10,
+                tahu: 5,
+                ampela: 12,
+                usus: 15,
+                ceker: 10,
+                leher: 8,
+                cikua: 8,
+                sosis_kecil: 10,
+                sosis_besar: 5,
+                bakso: 12,
+                rais_boll_ayam_suwir: 8,
+                rais_boll_cumi_asin: 10,
+                tahu_bacem: 5,
+                tempe_bacem: 6,
+                nasi_kucing_ayam_suwir: 12,
+                nasi_kucing_cumi_asin: 10
+            }
+        ];
+
+        const ws = XLSX.utils.json_to_sheet(rows, { header: headers });
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, 'Template Import');
+
+        // Set custom column widths for readability
+        const wscols = headers.map(h => ({ wch: Math.max(h.length + 3, 12) }));
+        ws['!cols'] = wscols;
+
+        const buffer = XLSX.write(wb, { type: 'buffer', bookType: 'xlsx' });
+
+        res.setHeader(
+            'Content-Type',
+            'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        );
+        res.setHeader(
+            'Content-Disposition',
+            'attachment; filename=template_import_angkringan.xlsx'
+        );
+        res.send(buffer);
+    } catch (error) {
+        next(error);
+    }
+});
+
 router.post('/excel', authenticate, authorize('SUPERADMIN'), upload.single('file'), async (req: any, res: any, next: any) => {
     try {
         if (!req.file) throw new AppError('File tidak ditemukan', 400);

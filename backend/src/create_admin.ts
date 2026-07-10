@@ -9,12 +9,12 @@ async function main() {
     const existingUser = await prisma.user.findFirst();
 
     if (existingUser) {
-        console.log('✅ Users already exist in database.');
+        console.log('Users already exist in database.');
         console.log('   You can login with existing credentials.');
         return;
     }
 
-    console.log('🌱 No users found. Creating initial users...');
+    console.log('No users found. Creating initial users...');
     const hashedPassword = await bcrypt.hash('password123', 10);
 
     const superadmin = await prisma.user.create({
@@ -25,7 +25,7 @@ async function main() {
             role: 'SUPERADMIN',
         },
     });
-    console.log('✅ Superadmin created: superadmin@angkringan.com');
+    console.log('Superadmin created: superadmin@angkringan.com');
 
     const admin = await prisma.user.create({
         data: {
@@ -35,19 +35,19 @@ async function main() {
             role: 'ADMIN',
         },
     });
-    console.log('✅ Admin created: admin@angkringan.com');
+    console.log('Admin created: admin@angkringan.com');
 
     console.log('------------------------------------------------');
     console.log('� Login Credentials:');
     console.log('   Superadmin: superadmin@angkringan.com / password123');
     console.log('   Admin:      admin@angkringan.com      / password123');
     console.log('------------------------------------------------');
-    console.log('👉 You can now run the import_data script.');
+    console.log('You can now run the import_data script.');
 }
 
 main()
     .catch((e) => {
-        console.error('❌ Error creating admin:', e);
+        console.error(' Error creating admin:', e);
         process.exit(1);
     })
     .finally(async () => {
