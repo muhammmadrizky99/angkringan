@@ -128,12 +128,80 @@ router.post('/excel', authenticate, authorize('SUPERADMIN'), upload.single('file
     try {
         if (!req.file) throw new AppError('File tidak ditemukan', 400);
 
+        // Validasi ekstensi file
+        const originalName = req.file.originalname?.toLowerCase() || '';
+        if (!originalName.endsWith('.xlsx') && !originalName.endsWith('.xls') && !originalName.endsWith('.csv')) {
+            throw new AppError('Format file tidak didukung. Gunakan file .xlsx, .xls, atau .csv', 400);
+        }
+
         // Baca file dengan opsi cellDates agar tanggal terbaca sebagai objek Date
-        const workbook = XLSX.read(req.file.buffer, { type: 'buffer', cellDates: true });
+        let workbook;
+        try {
+            workbook = XLSX.read(req.file.buffer, { type: 'buffer', cellDates: true });
+        } catch (parseError) {
+            throw new AppError('File tidak dapat dibaca. Pastikan file adalah spreadsheet yang valid (.xlsx/.xls/.csv)', 400);
+        }
+
         const sheetName = workbook.SheetNames[0];
         const data: any[] = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], { defval: 0 });
 
-        if (data.length === 0) throw new AppError('File Excel kosong atau format tidak didukung', 400);
+        if (data.length === 0) throw new AppError('File Excel kosong atau tidak memiliki data pada sheet pertama', 400);
+
+        // ===== VALIDASI FORMAT KOLOM =====
+        const fileColumns = Object.keys(data[0]).map(c => c.toLowerCase().trim());
+
+        // 1. Cek kolom tanggal wajib ada
+        const hasDateColumn = fileColumns.some(c => ['tanggal', 'date'].includes(c));
+        if (!hasDateColumn) {
+            throw new AppError(
+                'Kolom "tanggal" tidak ditemukan di file. ' +
+                'Kolom pertama harus bernama "tanggal" (format: YYYY-MM-DD). ' +
+                'Kolom yang ditemukan: ' + fileColumns.join(', ') + '. ' +
+                'Silakan unduh template Excel untuk melihat format yang benar.',
+                400
+            );
+        }
+
+        // 2. Cek apakah ada kolom produk yang dikenali
+        const validProductColumns = Object.keys(COLUMN_TO_DB_NAME);
+        const matchedColumns = fileColumns.filter(c => validProductColumns.includes(c));
+        const unmatchedColumns = fileColumns.filter(c => 
+            !validProductColumns.includes(c) && !['tanggal', 'date'].includes(c)
+        );
+
+        if (matchedColumns.length === 0) {
+            throw new AppError(
+                'Tidak ada kolom produk yang dikenali di file. ' +
+                'Kolom yang ditemukan: ' + fileColumns.join(', ') + '. ' +
+                'Nama kolom produk harus sesuai format teknis (contoh: buntut, telur_puyuh, bakso, ceker, dll). ' +
+                'Silakan unduh template Excel untuk melihat nama kolom yang benar.',
+                400
+            );
+        }
+
+        // 3. Validasi format tanggal pada baris pertama
+        const firstRow = data[0];
+        const rawDateSample = firstRow.tanggal || firstRow.Tanggal || firstRow.Date || firstRow.date;
+        const dateSample = new Date(rawDateSample);
+        if (!rawDateSample || isNaN(dateSample.getTime())) {
+            throw new AppError(
+                'Format tanggal pada baris pertama tidak valid: "' + String(rawDateSample) + '". ' +
+                'Gunakan format YYYY-MM-DD (contoh: 2026-05-01).',
+                400
+            );
+        }
+
+        // 4. Validasi nilai produk harus berupa angka (cek baris pertama)
+        for (const col of matchedColumns) {
+            const val = firstRow[col] ?? firstRow[col.charAt(0).toUpperCase() + col.slice(1)];
+            if (val !== undefined && val !== 0 && isNaN(parseInt(String(val)))) {
+                throw new AppError(
+                    `Nilai pada kolom "${col}" baris pertama bukan angka: "${val}". ` +
+                    'Setiap kolom produk harus berisi jumlah porsi terjual (angka bulat).',
+                    400
+                );
+            }
+        }
 
         const products = await prisma.product.findMany();
         const productDbMap: { [key: string]: { id: string, price: number } } = {};
@@ -142,16 +210,27 @@ router.post('/excel', authenticate, authorize('SUPERADMIN'), upload.single('file
         });
 
         let importedDays = 0;
+        let skippedRows = 0;
+        let invalidDateRows: string[] = [];
 
         // Gunakan transaksi database (Transaction) agar lebih aman
         await prisma.$transaction(async (tx) => {
-            for (const row of data) {
+            for (let i = 0; i < data.length; i++) {
+                const row = data[i];
+
                 // Cari kolom tanggal (bisa 'tanggal' atau 'Date' dsb)
-                const rawDate = row.tanggal || row.Date || row.date;
-                if (!rawDate) continue;
+                const rawDate = row.tanggal || row.Tanggal || row.Date || row.date;
+                if (!rawDate) {
+                    skippedRows++;
+                    continue;
+                }
                 
                 const date = new Date(rawDate);
-                if (isNaN(date.getTime())) continue;
+                if (isNaN(date.getTime())) {
+                    invalidDateRows.push(`Baris ${i + 2}: "${String(rawDate)}"`);
+                    skippedRows++;
+                    continue;
+                }
 
                 // Set ke jam 00:00:00 agar konsisten
                 date.setUTCHours(0, 0, 0, 0);
@@ -201,19 +280,48 @@ router.post('/excel', authenticate, authorize('SUPERADMIN'), upload.single('file
                     });
 
                     importedDays++;
+                } else {
+                    skippedRows++;
                 }
             }
         }, { timeout: 30000 }); // Beri waktu lebih lama untuk data banyak
 
+        // Jika tidak ada satupun data yang berhasil diimport
+        if (importedDays === 0) {
+            throw new AppError(
+                'Tidak ada data yang berhasil diimport. ' +
+                'Pastikan file berisi kolom "tanggal" dengan format YYYY-MM-DD dan ' +
+                'kolom produk dengan nama yang sesuai (contoh: buntut, telur_puyuh, bakso). ' +
+                (invalidDateRows.length > 0 
+                    ? 'Tanggal tidak valid: ' + invalidDateRows.slice(0, 5).join('; ') + '. '
+                    : '') +
+                'Silakan unduh template Excel untuk melihat format yang benar.',
+                400
+            );
+        }
+
+        // Susun pesan respons
+        let message = `Berhasil mengimport data untuk ${importedDays} hari ke database.`;
+        if (unmatchedColumns.length > 0) {
+            message += ` Peringatan: ${unmatchedColumns.length} kolom tidak dikenali dan diabaikan (${unmatchedColumns.join(', ')}).`;
+        }
+        if (skippedRows > 0) {
+            message += ` ${skippedRows} baris dilewati karena format tidak sesuai.`;
+        }
+
         res.json({ 
             success: true, 
-            message: `Berhasil mengimport data untuk ${importedDays} hari ke database.`,
+            message,
             count: importedDays 
         });
 
     } catch (error: any) {
         console.error('Import Error:', error);
-        next(new AppError(error.message || 'Terjadi kesalahan saat proses import', 500));
+        if (error instanceof AppError) {
+            next(error);
+        } else {
+            next(new AppError(error.message || 'Terjadi kesalahan saat proses import', 500));
+        }
     }
 });
 

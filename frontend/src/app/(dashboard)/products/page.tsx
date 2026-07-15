@@ -6,22 +6,30 @@ import toast from 'react-hot-toast';
 import { FiPlus, FiEdit2, FiTrash2, FiX, FiSearch, FiDatabase } from 'react-icons/fi';
 import ConfirmModal from '@/components/ConfirmModal';
 
+interface Supplier {
+    id: string;
+    name: string;
+}
+
 interface Product {
     id: string;
     name: string;
     category: string;
     price: number;
     currentStock: number;
+    supplierId?: string;
+    supplier?: Supplier;
 }
 
 const CATEGORY_TABS = ['Semua', 'Nasi', 'Sate', 'Lauk', 'Gorengan', 'Minuman'];
 
 export default function ProductsPage() {
     const [products, setProducts] = useState<Product[]>([]);
+    const [suppliers, setSuppliers] = useState<Supplier[]>([]);
     const [loading, setLoading] = useState(true);
     const [showModal, setShowModal] = useState(false);
     const [editing, setEditing] = useState<Product | null>(null);
-    const [form, setForm] = useState({ name: '', category: 'Nasi', price: '', currentStock: '' });
+    const [form, setForm] = useState({ name: '', category: 'Nasi', price: '', currentStock: '', supplierId: '' });
     const [deleteTarget, setDeleteTarget] = useState<Product | null>(null);
 
     // Search and filter states
@@ -30,7 +38,17 @@ export default function ProductsPage() {
 
     useEffect(() => {
         fetchProducts();
+        fetchSuppliers();
     }, []);
+
+    const fetchSuppliers = async () => {
+        try {
+            const res = await api.get('/suppliers');
+            setSuppliers(res.data.data || []);
+        } catch (error) {
+            console.error('Gagal memuat supplier', error);
+        }
+    };
 
     const fetchProducts = async () => {
         try {
@@ -50,11 +68,12 @@ export default function ProductsPage() {
                 name: product.name,
                 category: product.category,
                 price: String(product.price),
-                currentStock: String(product.currentStock)
+                currentStock: String(product.currentStock),
+                supplierId: product.supplierId || ''
             });
         } else {
             setEditing(null);
-            setForm({ name: '', category: 'Nasi', price: '', currentStock: '' });
+            setForm({ name: '', category: 'Nasi', price: '', currentStock: '', supplierId: '' });
         }
         setShowModal(true);
     };
@@ -66,7 +85,8 @@ export default function ProductsPage() {
                 name: form.name,
                 category: form.category,
                 price: parseFloat(form.price),
-                currentStock: parseInt(form.currentStock)
+                currentStock: parseInt(form.currentStock),
+                supplierId: form.supplierId || null
             };
             if (editing) {
                 await api.put(`/products/${editing.id}`, data);
@@ -175,6 +195,7 @@ export default function ProductsPage() {
                                     <th>Kategori</th>
                                     <th>Harga Porsi</th>
                                     <th>Stok Saat Ini</th>
+                                    <th>Supplier</th>
                                     <th className="text-center">Aksi</th>
                                 </tr>
                             </thead>
@@ -190,6 +211,9 @@ export default function ProductsPage() {
                                             <span className={`inline-flex items-center gap-1 font-bold ${p.currentStock < 10 ? 'text-red-500' : 'text-dark-800'}`}>
                                                 {p.currentStock} {p.currentStock < 10 ? '(Kritis)' : 'porsi'}
                                             </span>
+                                        </td>
+                                        <td className="text-sm text-dark-600">
+                                            {p.supplier ? p.supplier.name : '-'}
                                         </td>
                                         <td>
                                             <div className="flex justify-center gap-2">
@@ -298,6 +322,19 @@ export default function ProductsPage() {
                                         *Untuk mengedit jumlah stok yang aktif, gunakan menu <strong>Kelola Stok</strong>.
                                     </p>
                                 )}
+                            </div>
+                            <div>
+                                <label className="text-xs font-semibold text-dark-700 block mb-1">Supplier (Opsional)</label>
+                                <select
+                                    value={form.supplierId}
+                                    onChange={(e) => setForm({ ...form, supplierId: e.target.value })}
+                                    className="input-field py-2 text-sm"
+                                >
+                                    <option value="">Pilih Supplier...</option>
+                                    {suppliers.map(s => (
+                                        <option key={s.id} value={s.id}>{s.name}</option>
+                                    ))}
+                                </select>
                             </div>
                             <div className="flex gap-3 pt-4">
                                 <button

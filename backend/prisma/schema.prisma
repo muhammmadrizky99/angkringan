@@ -36,6 +36,8 @@ model Product {
   price            Float
   currentStock     Int               @default(0) @map("current_stock")
   createdAt        DateTime          @default(now()) @map("created_at")
+  supplierId       String?           @map("supplier_id")
+  supplier         Supplier?         @relation(fields: [supplierId], references: [id])
   transactionItems TransactionItem[]
   stockMovements   StockMovement[]
   predictions      Prediction[]
@@ -44,10 +46,11 @@ model Product {
 }
 
 model Supplier {
-  id      String @id @default(uuid())
-  name    String
-  phone   String
-  address String
+  id       String    @id @default(uuid())
+  name     String
+  phone    String
+  address  String
+  products Product[]
 
   @@map("suppliers")
 }
@@ -87,27 +90,29 @@ model StockMovement {
 }
 
 model Prediction {
-  id                String   @id @default(uuid())
-  productId         String   @map("product_id")
-  predictionDate    DateTime @map("prediction_date")
-  predictedQuantity Float    @map("predicted_quantity")
+  id                String       @id @default(uuid())
+  productId         String       @map("product_id")
+  predictionDate    DateTime     @map("prediction_date")
+  predictedQuantity Float        @map("predicted_quantity")
   mae               Float?
   rmse              Float?
   mape              Float?
-  method            String?  @default("xgboost")
-  weather           Int?     @default(0)
-  product           Product  @relation(fields: [productId], references: [id])
+  method            String?      @default("xgboost")
+  weather           Int?         @default(0)
+  product           Product      @relation(fields: [productId], references: [id])
+  dailyRecord       DailyRecord? @relation(fields: [predictionDate], references: [date])
 
   @@map("predictions")
 }
 
 model DailyRecord {
-  id        String   @id @default(uuid())
-  date      DateTime @unique
-  weather   Int      @default(0)
-  event     Int      @default(0)
-  eventNote String?  @map("event_note")
-  createdAt DateTime @default(now()) @map("created_at")
+  id          String       @id @default(uuid())
+  date        DateTime     @unique
+  weather     Int          @default(0)
+  event       Int          @default(0)
+  eventNote   String?      @map("event_note")
+  createdAt   DateTime     @default(now()) @map("created_at")
+  predictions Prediction[]
 
   @@map("daily_records")
 }

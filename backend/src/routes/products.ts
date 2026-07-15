@@ -10,6 +10,7 @@ const router = Router();
 router.get('/', authenticate, async (_req: AuthRequest, res: any, next: any) => {
     try {
         const products = await prisma.product.findMany({
+            include: { supplier: true },
             orderBy: { createdAt: 'desc' },
         });
         res.json({ success: true, data: products });
@@ -41,6 +42,7 @@ router.post(
         body('category').notEmpty().withMessage('Kategori wajib diisi'),
         body('price').isFloat({ min: 0 }).withMessage('Harga harus angka positif'),
         body('currentStock').isInt({ min: 0 }).withMessage('Stok harus angka non-negatif'),
+        body('supplierId').optional({ nullable: true, checkFalsy: true }).isUUID().withMessage('Format ID supplier tidak valid'),
     ],
     async (req: any, res: any, next: any) => {
         try {
@@ -49,7 +51,7 @@ router.post(
                 return res.status(400).json({ success: false, errors: errors.array() });
             }
 
-            const { name, category, price, currentStock } = req.body;
+            const { name, category, price, currentStock, supplierId } = req.body;
 
             const existingProduct = await prisma.product.findFirst({
                 where: { name: name }
@@ -64,7 +66,8 @@ router.post(
                     name, 
                     category, 
                     price: Number(price), 
-                    currentStock: Number(currentStock) 
+                    currentStock: Number(currentStock),
+                    supplierId: supplierId || null
                 },
             });
             res.status(201).json({ success: true, data: product });
@@ -84,6 +87,7 @@ router.put(
         body('category').optional().notEmpty().withMessage('Kategori tidak boleh kosong'),
         body('price').optional().isFloat({ min: 0 }).withMessage('Harga harus angka positif'),
         body('currentStock').optional().isInt({ min: 0 }).withMessage('Stok harus angka non-negatif'),
+        body('supplierId').optional({ nullable: true, checkFalsy: true }).isUUID().withMessage('Format ID supplier tidak valid'),
     ],
     async (req: AuthRequest, res: any, next: any) => {
         try {
@@ -111,6 +115,7 @@ router.put(
 
             if (updateData.price !== undefined) updateData.price = Number(updateData.price);
             if (updateData.currentStock !== undefined) updateData.currentStock = Number(updateData.currentStock);
+            if (updateData.supplierId === '') updateData.supplierId = null;
 
             const updated = await prisma.product.update({
                 where: { id: req.params.id },

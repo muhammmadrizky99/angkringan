@@ -47,6 +47,16 @@ router.post('/generate', authenticate, async (req: AuthRequest, res: any, next: 
 
         const predictions: any[] = [];
 
+        const tomorrowDate = new Date();
+        tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+        tomorrowDate.setHours(0, 0, 0, 0);
+
+        await prisma.dailyRecord.upsert({
+            where: { date: tomorrowDate },
+            update: { weather: tomorrowWeather, event: tomorrowEvent },
+            create: { date: tomorrowDate, weather: tomorrowWeather, event: tomorrowEvent }
+        });
+
         for (const product of products) {
             // Get historical sales data (last 180 days for better accuracy)
             const salesData = await prisma.transactionItem.findMany({
@@ -93,7 +103,7 @@ router.post('/generate', authenticate, async (req: AuthRequest, res: any, next: 
                 const prediction = await prisma.prediction.create({
                     data: {
                         productId: product.id,
-                        predictionDate: new Date(new Date().setDate(new Date().getDate() + 1)),
+                        predictionDate: tomorrowDate,
                         predictedQuantity: Math.round(avgQuantity),
                         mae: null,
                         rmse: null,
@@ -125,7 +135,7 @@ router.post('/generate', authenticate, async (req: AuthRequest, res: any, next: 
                 const prediction = await prisma.prediction.create({
                     data: {
                         productId: product.id,
-                        predictionDate: new Date(new Date().setDate(new Date().getDate() + 1)),
+                        predictionDate: tomorrowDate,
                         predictedQuantity: result.predicted_quantity,
                         mae: result.mae,
                         rmse: result.rmse,
@@ -145,7 +155,7 @@ router.post('/generate', authenticate, async (req: AuthRequest, res: any, next: 
                 const prediction = await prisma.prediction.create({
                     data: {
                         productId: product.id,
-                        predictionDate: new Date(new Date().setDate(new Date().getDate() + 1)),
+                        predictionDate: tomorrowDate,
                         predictedQuantity: Math.round(avgQuantity),
                         mae: null,
                         rmse: null,
