@@ -2,8 +2,8 @@
 XGBoost Model Training for Angkringan Agoy Demand Prediction
 Trains models using merged CSV data from database (sales + weather)
 
-Features: day_of_week, is_weekend, month, is_ramadan, lag_1, lag_7,
-          rolling_mean_7, rolling_mean_14, weather, event
+Features: day_of_week, is_weekend, month, day_of_month, is_ramadan, lag_1, lag_3, lag_7,
+          rolling_mean_7, rolling_mean_14, rolling_std_7, weather, event
 Split: 80% train, 20% test (time-series split) for evaluation
 Final: Retrained on 100% data for production
 Metrics: MAE, RMSE, MAPE
@@ -35,16 +35,31 @@ def calculate_mape(y_true, y_pred):
     return float(np.mean(np.abs((y_true[mask] - y_pred[mask]) / y_true[mask])) * 100)
 
 
+# Hyperparameter XGBoost (identik dengan predict_service.py)
+XGB_PARAMS = {
+    "n_estimators": 200,
+    "max_depth": 5,
+    "learning_rate": 0.05,
+    "subsample": 0.85,
+    "colsample_bytree": 0.85,
+    "min_child_weight": 2,
+    "gamma": 0.05,
+    "reg_alpha": 0.05,
+    "reg_lambda": 0.8,
+    "random_state": 42,
+    "objective": "reg:squarederror",
+}
+
+
 def create_features(df):
-    """Create time series features for a single product"""
+    """Create time series features for a single product.
+    Logika identik dengan predict_service.py untuk konsistensi hasil."""
     df = df.sort_values("date").copy()
 
     # Outlier handling: Percentile Capping
-    # Memotong nilai quantity yang sangat ekstrem (di luar persentil 1-99)
-    # Lebih halus dari IQR agar tidak memotong lonjakan musiman (Ramadan, weekend)
-    lower = df["quantity"].quantile(0.01)
-    upper = df["quantity"].quantile(0.99)
-    df["quantity"] = df["quantity"].clip(lower=lower, upper=upper)
+    Q1 = df["quantity"].quantile(0.01)
+    Q99 = df["quantity"].quantile(0.99)
+    df["quantity"] = df["quantity"].clip(lower=Q1, upper=Q99)
 
     df["day_of_week"] = df["date"].dt.dayofweek
     df["is_weekend"] = (df["day_of_week"] >= 5).astype(int)
@@ -54,14 +69,16 @@ def create_features(df):
         ((df["date"] >= RAMADAN_1446_START) & (df["date"] <= RAMADAN_1446_END)) |
         ((df["date"] >= RAMADAN_1447_START) & (df["date"] <= RAMADAN_1447_END))
     ).astype(int)
-    
-    df["lag_1"] = df["quantity"].shift(1).bfill()
-    df["lag_3"] = df["quantity"].shift(3).bfill()
-    df["lag_7"] = df["quantity"].shift(7).bfill()
-    
-    df["rolling_mean_7"] = df["quantity"].rolling(window=7, min_periods=1).mean().bfill()
-    df["rolling_mean_14"] = df["quantity"].rolling(window=14, min_periods=1).mean().bfill()
-    df["rolling_std_7"] = df["quantity"].rolling(window=7, min_periods=1).std().fillna(0)
+
+    # Lag features (tanpa backfill, konsisten dengan predict_service.py)
+    df["lag_1"] = df["quantity"].shift(1)
+    df["lag_3"] = df["quantity"].shift(3)
+    df["lag_7"] = df["quantity"].shift(7)
+
+    # Rolling statistics (tanpa min_periods, konsisten dengan predict_service.py)
+    df["rolling_mean_7"] = df["quantity"].rolling(window=7).mean()
+    df["rolling_mean_14"] = df["quantity"].rolling(window=14).mean()
+    df["rolling_std_7"] = df["quantity"].rolling(window=7).std()
 
     # Ensure weather and event columns exist
     if "weather" not in df.columns:
@@ -72,7 +89,9 @@ def create_features(df):
     df["weather"] = df["weather"].fillna(0).astype(int)
     df["event"] = df["event"].fillna(0).astype(int)
 
-    return df.dropna()
+    # Drop baris dengan NaN pada fitur lag/rolling (konsisten dengan predict_service.py)
+    df = df.dropna(subset=["lag_1", "lag_3", "lag_7", "rolling_mean_7", "rolling_mean_14", "rolling_std_7"])
+    return df
 
 
 FEATURE_COLS = [
@@ -98,10 +117,7 @@ def train_model_for_product(product_df, product_name):
     X_train, X_test = X.iloc[:train_size], X.iloc[train_size:]
     y_train, y_test = y.iloc[:train_size], y.iloc[train_size:]
 
-    eval_model = XGBRegressor(
-        n_estimators=200, max_depth=5, learning_rate=0.05, subsample=0.85, 
-        colsample_bytree=0.85, random_state=42, objective='reg:squarederror'
-    )
+    eval_model = XGBRegressor(**XGB_PARAMS)
     eval_model.fit(X_train, y_train)
     y_pred = eval_model.predict(X_test)
     y_pred = np.maximum(y_pred, 0)
@@ -111,10 +127,7 @@ def train_model_for_product(product_df, product_name):
     mape = calculate_mape(y_test, y_pred)
 
     # 2. PRODUKSI (Latih ulang menggunakan 100% data agar model paling update)
-    final_model = XGBRegressor(
-        n_estimators=200, max_depth=5, learning_rate=0.05, subsample=0.85, 
-        colsample_bytree=0.85, random_state=42, objective='reg:squarederror'
-    )
+    final_model = XGBRegressor(**XGB_PARAMS)
     final_model.fit(X, y)
 
     importance = dict(zip(FEATURE_COLS, [float(x) for x in final_model.feature_importances_]))
