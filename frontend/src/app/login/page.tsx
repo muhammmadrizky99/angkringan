@@ -48,8 +48,8 @@ export default function LoginPage() {
                 <div className="relative z-10 flex flex-col justify-between p-12 w-full">
                     {/* Top — Logo */}
                     <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg shadow-primary-500/30">
-                            <img src="/images/logo1.jpeg" alt="Logo" className="w-full h-full object-contain" />
+                        <div className="w-12 h-12 rounded-full overflow-hidden shadow-lg shadow-primary-500/30 border-2 border-white/20 flex items-center justify-center bg-white">
+                            <img src="/images/logo1.jpeg" alt="Logo" className="w-full h-full object-cover object-center scale-110" />
                         </div>
                         <div>
                             <h2 className="text-white text-lg font-bold">Angkringan Agoy</h2>
@@ -100,8 +100,8 @@ export default function LoginPage() {
             <div className="w-full lg:w-[45%] flex items-center justify-center bg-white p-6 lg:p-12 relative">
                 {/* Mobile logo */}
                 <div className="lg:hidden absolute top-8 left-6 flex items-center gap-2">
-                    <div className="w-9 h-9 rounded-lg overflow-hidden">
-                        <img src="/images/logo1.jpeg" alt="Logo" className="w-full h-full object-contain" />
+                    <div className="w-9 h-9 rounded-full overflow-hidden border-2 border-primary-100 shadow-sm flex items-center justify-center bg-white">
+                        <img src="/images/logo1.jpeg" alt="Logo" className="w-full h-full object-cover object-center scale-110" />
                     </div>
                     <span className="font-bold text-dark-900">Angkringan Agoy</span>
                 </div>
