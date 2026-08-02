@@ -72,9 +72,15 @@ export default function ReportsPage() {
         const now = new Date();
         const day = now.getDay();
         const diff = now.getDate() - day + (day === 0 ? -6 : 1);
-        const monday = new Date(now.setDate(diff)).toISOString().split('T')[0];
-        const sunday = new Date(now.setDate(diff + 6)).toISOString().split('T')[0];
-        return { start: monday, end: sunday };
+        
+        const startDate = new Date(now.setDate(diff));
+        const endDate = new Date(startDate.getTime());
+        endDate.setDate(startDate.getDate() + 6);
+        
+        return { 
+            start: startDate.toISOString().split('T')[0], 
+            end: endDate.toISOString().split('T')[0] 
+        };
     };
 
     const getMonthRange = () => {

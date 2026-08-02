@@ -91,7 +91,7 @@ export default function Sidebar() {
                 <div className="p-5 border-b border-dark-700/50 flex-shrink-0">
                     <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
-                            <img src="/images/logo.png" alt="Logo" className="w-full h-full object-cover" />
+                            <img src="/images/logo1.jpeg" alt="Logo" className="w-full h-full object-contain" />
                         </div>
                         {!isCollapsed && (
                             <div className="animate-fade-in overflow-hidden">

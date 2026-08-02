@@ -49,7 +49,7 @@ export default function LoginPage() {
                     {/* Top — Logo */}
                     <div className="flex items-center gap-3">
                         <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg shadow-primary-500/30">
-                            <img src="/images/logo.png" alt="Logo" className="w-full h-full object-cover" />
+                            <img src="/images/logo1.jpeg" alt="Logo" className="w-full h-full object-contain" />
                         </div>
                         <div>
                             <h2 className="text-white text-lg font-bold">Angkringan Agoy</h2>
@@ -101,7 +101,7 @@ export default function LoginPage() {
                 {/* Mobile logo */}
                 <div className="lg:hidden absolute top-8 left-6 flex items-center gap-2">
                     <div className="w-9 h-9 rounded-lg overflow-hidden">
-                        <img src="/images/logo.png" alt="Logo" className="w-full h-full object-cover" />
+                        <img src="/images/logo1.jpeg" alt="Logo" className="w-full h-full object-contain" />
                     </div>
                     <span className="font-bold text-dark-900">Angkringan Agoy</span>
                 </div>
