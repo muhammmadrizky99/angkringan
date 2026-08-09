@@ -19,7 +19,7 @@ async function main() {
 
     const superadmin = await prisma.user.create({
         data: {
-            name: 'Pak Budi (Pemilik)',
+            name: 'Rahmat Prayoga Putra (Owner)',
             email: 'superadmin@angkringan.com',
             password: hashedPassword,
             role: 'SUPERADMIN',
