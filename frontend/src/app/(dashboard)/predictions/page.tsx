@@ -71,6 +71,7 @@ export default function PredictionsPage() {
             const res = await api.post('/predictions/generate', {
                 weather: selectedWeather,
                 event: isEvent ? 1 : 0,
+                eventNote: isEvent ? eventNote || null : null,
             });
             setPredictions(res.data.data);
             toast.success(`Prediksi berhasil! (${WEATHER_OPTIONS[selectedWeather].label})`);

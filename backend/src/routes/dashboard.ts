@@ -130,10 +130,9 @@ router.get('/stock-summary', authenticate, async (_req: AuthRequest, res: any, n
 // GET /api/dashboard/summary
 router.get('/summary', authenticate, async (_req: AuthRequest, res: any, next: any) => {
     try {
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        const tomorrow = new Date(today);
-        tomorrow.setDate(tomorrow.getDate() + 1);
+        const now = new Date();
+        const today = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
+        const tomorrow = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate() + 1));
 
         const [todayTransactions, totalProducts, totalSuppliers, totalUsers] = await Promise.all([
             prisma.transaction.findMany({

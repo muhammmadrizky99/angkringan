@@ -7,10 +7,18 @@ import axios from 'axios';
 
 const router = Router();
 
+/**
+ * Konversi tanggal lokal (WIB) ke UTC midnight.
+ */
+function toUTCMidnight(date?: Date): Date {
+    const d = date || new Date();
+    return new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+}
+
 // POST /api/predictions/generate
 router.post('/generate', authenticate, async (req: AuthRequest, res: any, next: any) => {
     try {
-        const { weather: overrideWeather, event: overrideEvent } = req.body;
+        const { weather: overrideWeather, event: overrideEvent, eventNote: overrideEventNote } = req.body;
 
         const products = await prisma.product.findMany();
 
@@ -21,6 +29,7 @@ router.post('/generate', authenticate, async (req: AuthRequest, res: any, next: 
         // Fetch tomorrow's weather forecast (or use override from frontend)
         let tomorrowWeather = 0;
         let tomorrowEvent = overrideEvent ?? 0;
+        let tomorrowEventNote = overrideEventNote ?? null;
 
         if (overrideWeather !== undefined) {
             tomorrowWeather = overrideWeather;
@@ -47,14 +56,13 @@ router.post('/generate', authenticate, async (req: AuthRequest, res: any, next: 
 
         const predictions: any[] = [];
 
-        const tomorrowDate = new Date();
-        tomorrowDate.setDate(tomorrowDate.getDate() + 1);
-        tomorrowDate.setHours(0, 0, 0, 0);
+        const today = toUTCMidnight();
+        const tomorrowDate = new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate() + 1));
 
         await prisma.dailyRecord.upsert({
             where: { date: tomorrowDate },
-            update: { weather: tomorrowWeather, event: tomorrowEvent },
-            create: { date: tomorrowDate, weather: tomorrowWeather, event: tomorrowEvent }
+            update: { weather: tomorrowWeather, event: tomorrowEvent, eventNote: tomorrowEventNote },
+            create: { date: tomorrowDate, weather: tomorrowWeather, event: tomorrowEvent, eventNote: tomorrowEventNote }
         });
 
         for (const product of products) {
@@ -214,11 +222,10 @@ router.get('/', authenticate, async (req: AuthRequest, res: any, next: any) => {
         const where: any = {};
 
         if (date) {
-            const startOfDay = new Date(date as string);
-            startOfDay.setHours(0, 0, 0, 0);
-            const endOfDay = new Date(date as string);
-            endOfDay.setHours(23, 59, 59, 999);
-            where.predictionDate = { gte: startOfDay, lte: endOfDay };
+            const d = new Date(date as string);
+            const startOfDay = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+            const endOfDay = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate() + 1));
+            where.predictionDate = { gte: startOfDay, lt: endOfDay };
         }
 
         const predictions = await prisma.prediction.findMany({

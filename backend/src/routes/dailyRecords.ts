@@ -5,6 +5,16 @@ import { fetchCurrentWeather, fetchTomorrowForecast } from '../lib/weather';
 
 const router = Router();
 
+/**
+ * Konversi tanggal lokal (WIB) ke UTC midnight.
+ * Mencegah bug timezone dimana setHours(0,0,0,0) di WIB
+ * menjadi hari sebelumnya saat disimpan sebagai UTC di PostgreSQL.
+ */
+function toUTCMidnight(date?: Date): Date {
+    const d = date || new Date();
+    return new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+}
+
 // GET /api/daily-records — list records
 router.get('/', authenticate, async (req: AuthRequest, res: any, next: any) => {
     try {
@@ -33,8 +43,7 @@ router.get('/', authenticate, async (req: AuthRequest, res: any, next: any) => {
 // GET /api/daily-records/today — get or create today's record (auto-fetch weather)
 router.get('/today', authenticate, async (_req: AuthRequest, res: any, next: any) => {
     try {
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
+        const today = toUTCMidnight();
 
         let record = await prisma.dailyRecord.findUnique({ where: { date: today } });
 
@@ -75,8 +84,7 @@ router.post('/', authenticate, async (req: AuthRequest, res: any, next: any) => 
             return res.status(400).json({ success: false, message: 'date is required' });
         }
 
-        const recordDate = new Date(date);
-        recordDate.setHours(0, 0, 0, 0);
+        const recordDate = toUTCMidnight(new Date(date));
 
         const record = await prisma.dailyRecord.upsert({
             where: { date: recordDate },
@@ -104,8 +112,7 @@ router.post('/', authenticate, async (req: AuthRequest, res: any, next: any) => 
 // POST /api/daily-records/fetch-weather — manually trigger weather fetch for today
 router.post('/fetch-weather', authenticate, async (_req: AuthRequest, res: any, next: any) => {
     try {
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
+        const today = toUTCMidnight();
 
         const weatherData = await fetchCurrentWeather();
 
