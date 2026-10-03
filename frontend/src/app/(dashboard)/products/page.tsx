@@ -1,10 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import api from '@/lib/api';
 import toast from 'react-hot-toast';
 import { FiPlus, FiEdit2, FiTrash2, FiX, FiSearch, FiDatabase } from 'react-icons/fi';
 import ConfirmModal from '@/components/ConfirmModal';
+import { getProductImage } from '@/lib/productImages';
 
 interface Supplier {
     id: string;
@@ -191,6 +193,7 @@ export default function ProductsPage() {
                         <table>
                             <thead>
                                 <tr>
+                                    <th>Gambar</th>
                                     <th>Nama Produk</th>
                                     <th>Kategori</th>
                                     <th>Harga Porsi</th>
@@ -202,6 +205,17 @@ export default function ProductsPage() {
                             <tbody>
                                 {filteredProducts.map((p) => (
                                     <tr key={p.id} className="hover:bg-dark-50/40 transition-colors">
+                                        <td>
+                                            <div className="w-12 h-12 rounded-xl overflow-hidden bg-slate-100 flex-shrink-0">
+                                                <Image
+                                                    src={getProductImage(p.name, p.category)}
+                                                    alt={p.name}
+                                                    width={48}
+                                                    height={48}
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </div>
+                                        </td>
                                         <td className="font-bold text-dark-800">{p.name}</td>
                                         <td>
                                             <span className="badge-primary font-semibold">{p.category}</span>
@@ -237,7 +251,7 @@ export default function ProductsPage() {
                                 ))}
                                 {filteredProducts.length === 0 && (
                                     <tr>
-                                        <td colSpan={5} className="text-center py-10 text-dark-500 italic">
+                                        <td colSpan={7} className="text-center py-10 text-dark-500 italic">
                                             Tidak ada produk yang cocok dengan kriteria pencarian Anda.
                                         </td>
                                     </tr>

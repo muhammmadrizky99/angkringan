@@ -1,14 +1,16 @@
 'use client';
 
 import { useEffect, useState, useMemo } from 'react';
+import Image from 'next/image';
 import api from '@/lib/api';
 import toast from 'react-hot-toast';
 import PageHeader from '@/components/PageHeader';
 import EmptyState from '@/components/EmptyState';
 import {
     FiShoppingCart, FiPlus, FiMinus, FiTrash2, FiCheck,
-    FiSearch, FiX, FiCheckCircle, FiBox
+    FiSearch, FiX, FiCheckCircle
 } from 'react-icons/fi';
+import { getProductImage } from '@/lib/productImages';
 
 interface Product {
     id: string;
@@ -217,8 +219,14 @@ export default function POSPage() {
                                                 {inCart.quantity}
                                             </div>
                                         )}
-                                        <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center mb-3">
-                                            <FiBox className="text-slate-400" size={20} />
+                                        <div className="w-14 h-14 rounded-xl bg-slate-100 overflow-hidden mb-3">
+                                            <Image
+                                                src={getProductImage(product.name, product.category)}
+                                                alt={product.name}
+                                                width={56}
+                                                height={56}
+                                                className="w-full h-full object-cover"
+                                            />
                                         </div>
                                         <p className="font-semibold text-dark-900 text-sm group-hover:text-primary-600 transition-colors leading-tight">{product.name}</p>
                                         <p className="text-primary-500 font-bold mt-1.5 text-sm">{formatCurrency(product.price)}</p>
@@ -260,8 +268,14 @@ export default function POSPage() {
                         <div className="space-y-2.5">
                             {cart.map((item) => (
                                 <div key={item.product.id} className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl animate-fade-in">
-                                    <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center flex-shrink-0">
-                                        <FiBox size={14} className="text-dark-400" />
+                                    <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 overflow-hidden flex-shrink-0">
+                                        <Image
+                                            src={getProductImage(item.product.name, item.product.category)}
+                                            alt={item.product.name}
+                                            width={32}
+                                            height={32}
+                                            className="w-full h-full object-cover"
+                                        />
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <p className="font-medium text-dark-900 text-sm truncate">{item.product.name}</p>
