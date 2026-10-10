@@ -162,12 +162,21 @@ DATABASE_URL="postgresql://user:pass@localhost:5432/spk_angkringan"
 JWT_SECRET="your-secret-key"
 PORT=5000
 ML_SERVICE_URL="http://localhost:5001"
+FRONTEND_URL="http://localhost:3000"
 ```
 
 ### Frontend (.env.local)
 ```
 NEXT_PUBLIC_API_URL=http://localhost:5000/api
 ```
+
+### Deployment gratis
+
+- Database PostgreSQL: Neon atau Supabase
+- Backend dan ML service: Render
+- Frontend: Vercel
+
+Untuk production, ubah `FRONTEND_URL` ke domain Vercel, `ML_SERVICE_URL` ke domain ML di Render, dan `NEXT_PUBLIC_API_URL` ke URL backend di Render. Jalankan `npx prisma db push` sekali setelah database production tersedia, lalu buat akun awal dengan `npx ts-node src/create_admin.ts`.
 
 ## 📝 Lisensi
 

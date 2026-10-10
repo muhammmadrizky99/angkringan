@@ -344,7 +344,8 @@ def predict_batch():
 
 
 if __name__ == "__main__":
-    print("Starting ML Prediction Service on port 5001...")
+    port = int(os.environ.get("PORT", "5001"))
+    print(f"Starting ML Prediction Service on port {port}...")
     print(f"Models directory: {MODELS_DIR}")
     print("Auto-retrain: ENABLED (Time Series Split + Full Data Retrain)")
     if os.path.exists(MODELS_DIR):
@@ -352,4 +353,4 @@ if __name__ == "__main__":
         print(f"Found {len(models)} trained models")
     else:
         print("No models directory found. Models will be created on first prediction.")
-    app.run(host="0.0.0.0", port=5001, debug=True)
+    app.run(host="0.0.0.0", port=port, debug=False)
