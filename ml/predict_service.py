@@ -23,11 +23,105 @@ import os
 import json
 import traceback
 from datetime import datetime
+# new
+import boto3
+from botocore.config import Config
 
 app = Flask(__name__)
 CORS(app)
 
 MODELS_DIR = os.path.join(os.path.dirname(__file__), "models")
+
+# new
+# Cloudflare R2 Configuration
+R2_ACCOUNT_ID = os.environ.get("R2_ACCOUNT_ID")
+R2_ACCESS_KEY_ID = os.environ.get("R2_ACCESS_KEY_ID")
+R2_SECRET_ACCESS_KEY = os.environ.get("R2_SECRET_ACCESS_KEY")
+R2_BUCKET_NAME = os.environ.get(
+    "R2_BUCKET_NAME",
+    "angkringan-ml-models"
+)
+
+r2 = None
+
+if all([R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY]):
+    r2 = boto3.client(
+        "s3",
+        endpoint_url=f"https://{R2_ACCOUNT_ID}.r2.cloudflarestorage.com",
+        aws_access_key_id=R2_ACCESS_KEY_ID,
+        aws_secret_access_key=R2_SECRET_ACCESS_KEY,
+        region_name="auto",
+        config=Config(signature_version="s3v4")
+    )
+    print("[R2] Cloudflare R2 connected.")
+else:
+    print("[R2] Credentials not configured. Using local storage.")
+
+# new
+def upload_model_to_r2(model_path, filename):
+    """Upload model hasil auto-retraining ke Cloudflare R2."""
+
+    if r2 is None:
+        print("[R2] Not configured. Model saved locally.")
+        return
+
+    try:
+        object_key = f"models/{filename}"
+
+        r2.upload_file(
+            model_path,
+            R2_BUCKET_NAME,
+            object_key
+        )
+
+        print(f"[R2] Model uploaded: {object_key}")
+
+    except Exception as e:
+        print(f"[R2] Upload failed: {e}")
+
+# new
+def download_models_from_r2():
+    if r2 is None:
+        print("[R2] Not configured. Skip model download.")
+        return
+
+    os.makedirs(MODELS_DIR, exist_ok=True)
+
+    try:
+        paginator = r2.get_paginator("list_objects_v2")
+        count = 0
+
+        for page in paginator.paginate(
+            Bucket=R2_BUCKET_NAME,
+            Prefix="models/"
+        ):
+            for obj in page.get("Contents", []):
+                key = obj["Key"]
+
+                if not key.endswith(".pkl"):
+                    continue
+
+                filename = os.path.basename(key)
+                local_path = os.path.join(MODELS_DIR, filename)
+
+                r2.download_file(
+                    R2_BUCKET_NAME,
+                    key,
+                    local_path
+                )
+
+                count += 1
+                print(f"[R2] Downloaded: {filename}")
+
+        print(f"[R2] Model synchronization completed: {count} models.")
+
+    except Exception as e:
+        print(f"[R2] Download failed: {e}. Continuing with local models.")
+
+
+# Synchronize models from R2 when the service starts
+download_models_from_r2()
+
 
 # Ramadan 1446H: 28 Feb 2025 - 29 Mar 2025
 RAMADAN_1446_START = pd.Timestamp("2025-02-28")
@@ -176,7 +270,14 @@ def auto_retrain(product_name, df_features):
     os.makedirs(MODELS_DIR, exist_ok=True)
     joblib.dump(final_model, model_path)
 
-    print(f"  [AUTO-RETRAIN] {product_name}: {len(df_features)} data | MAPE: {mape:.1f}% | Model saved")
+    # new
+    upload_model_to_r2(
+        model_path, 
+        f"model_{safe_name}.pkl"
+    )
+    
+    mape_text = f"{mape:.1f}%" if mape is not None else "N/A"
+    print(f"  [AUTO-RETRAIN] {product_name}: {len(df_features)} data | MAPE: {mape_text} | Model saved")
 
     return final_model, mae, rmse, mape
 
